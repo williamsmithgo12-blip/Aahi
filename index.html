@@ -1,0 +1,3148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#0a0908" />
+
+<!-- ============================================================
+     SEO / META
+     ============================================================ -->
+<title>Aahii | A New Era of Dining — Worli, Mumbai</title>
+<meta name="description" content="Aahii — a sophisticated North Indian dining destination at SOBO 25, Worli, Mumbai. Modern interpretations, slow-cooked kebabs, expertly crafted cocktails. Rated 4.6★ by 74+ guests." />
+<meta name="keywords" content="Aahii restaurant Mumbai, North Indian restaurant Worli, fine dining Mumbai, SOBO 25, Mughlai Mumbai, cocktail bar Worli" />
+<link rel="canonical" href="https://aahii-mumbai.example/" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="restaurant" />
+<meta property="og:title" content="Aahii | A New Era of Dining — Worli, Mumbai" />
+<meta property="og:description" content="A sophisticated North Indian dining destination by renowned chefs. Slow-cooked kebabs, fragrant biryanis, expertly crafted cocktails." />
+<meta property="og:image" content="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80" />
+<meta property="og:locale" content="en_IN" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Aahii | A New Era of Dining" />
+<meta name="twitter:description" content="A sophisticated North Indian dining destination in Worli, Mumbai." />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+<!-- ============================================================
+     STRUCTURED DATA
+     ============================================================ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Aahii",
+  "alternateName": "আহী",
+  "servesCuisine": ["Mughlai","North Indian","Bar","Desserts"],
+  "priceRange": "₹2,000+",
+  "telephone": "+91-98200-50705",
+  "openingHours": "Tu-Su 12:30-00:30",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "4th Floor, Bengal Chemical Bavan, SOBO 25, SV 188, Swatantryaveer Savarkar Rd, opp. Century Bazaar, Mahim West",
+    "addressLocality": "Worli, Mumbai",
+    "addressRegion": "Maharashtra",
+    "postalCode": "400025",
+    "addressCountry": "IN"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.6",
+    "reviewCount": "74"
+  }
+}
+</script>
+
+<style>
+/* ============================================================
+   1. DESIGN TOKENS
+   ============================================================ */
+:root{
+  --ink:        #0a0908;
+  --ink-soft:   #0f0d0c;
+  --ink-3:      #15120f;
+  --ink-4:      #1c1815;
+  --ivory:      #f5efe2;
+  --ivory-2:    #ebe2cf;
+  --ivory-3:    #d9cdb2;
+  --gold:       #c9a961;
+  --gold-lt:    #e0c789;
+  --gold-dk:    #96793a;
+  --gold-deep:  #6b5525;
+  --wine:       #4a1d2b;
+  --wine-lt:    #6e2c40;
+  --plum:       #2a1421;
+
+  --line-gold:  rgba(201,169,97,.26);
+  --line-dark:  rgba(245,239,226,.10);
+  --line-light: rgba(10,9,8,.12);
+
+  --ff-display: "Cormorant Garamond", "Times New Roman", serif;
+  --ff-body:    "Montserrat", "Helvetica Neue", Arial, sans-serif;
+
+  --gutter: clamp(20px, 5vw, 80px);
+  --section-y: clamp(80px, 11vw, 180px);
+  --maxw: 1360px;
+
+  --ease: cubic-bezier(.22,.61,.36,1);
+  --ease-out: cubic-bezier(.16,1,.3,1);
+}
+
+/* ============================================================
+   2. RESET / BASE
+   ============================================================ */
+*,*::before,*::after{ box-sizing:border-box; }
+html{ -webkit-text-size-adjust:100%; scroll-behavior:smooth; }
+body{
+  margin:0;
+  background:var(--ink);
+  color:var(--ivory);
+  font-family:var(--ff-body);
+  font-weight:300;
+  font-size:16px;
+  line-height:1.75;
+  letter-spacing:.015em;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+img{ max-width:100%; display:block; }
+a{ color:inherit; text-decoration:none; }
+button{ font:inherit; color:inherit; background:none; border:0; cursor:pointer; }
+input,select,textarea{ font:inherit; color:inherit; }
+h1,h2,h3,h4,h5{ margin:0; font-weight:400; }
+p{ margin:0; }
+ul{ margin:0; padding:0; list-style:none; }
+
+::selection{ background:var(--gold); color:var(--ink); }
+
+:focus-visible{
+  outline:1.5px solid var(--gold);
+  outline-offset:3px;
+  border-radius:1px;
+}
+
+::-webkit-scrollbar{ width:10px; height:10px; }
+::-webkit-scrollbar-track{ background:var(--ink-soft); }
+::-webkit-scrollbar-thumb{ background:#332a22; border-radius:10px; }
+::-webkit-scrollbar-thumb:hover{ background:var(--gold-dk); }
+
+/* ============================================================
+   3. UTILITIES
+   ============================================================ */
+.container{
+  width:100%;
+  max-width:var(--maxw);
+  margin-inline:auto;
+  padding-inline:var(--gutter);
+}
+.section{ position:relative; padding-block:var(--section-y); }
+.section--dark{ background:var(--ink); }
+.section--soft{ background:var(--ink-soft); }
+.section--ivory{ background:var(--ivory); color:var(--ink); }
+
+.sr-only{
+  position:absolute; width:1px; height:1px; padding:0; margin:-1px;
+  overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0;
+}
+
+.eyebrow{
+  display:inline-flex; align-items:center; gap:14px;
+  font-size:10.5px; letter-spacing:.42em; text-transform:uppercase;
+  font-weight:500; color:var(--gold);
+}
+.eyebrow::before{
+  content:""; width:34px; height:1px; background:currentColor; opacity:.6;
+  display:inline-block;
+}
+.eyebrow--center::after{
+  content:""; width:34px; height:1px; background:currentColor; opacity:.6;
+  display:inline-block;
+}
+
+.display{
+  font-family:var(--ff-display);
+  font-weight:400;
+  line-height:1;
+  letter-spacing:-.012em;
+  font-size:clamp(2.6rem, 7vw, 6.2rem);
+}
+.display--sm{ font-size:clamp(2.1rem, 4.8vw, 3.8rem); line-height:1.05; }
+
+.italic-accent{
+  font-style:italic;
+  color:var(--gold-lt);
+  font-weight:300;
+}
+
+.lede{
+  font-size:clamp(1rem, 1.25vw, 1.1rem);
+  line-height:1.95;
+  color:rgba(245,239,226,.68);
+  max-width:58ch;
+}
+.section--ivory .lede{ color:rgba(10,9,8,.66); }
+
+/* ============================================================
+   4. FILM GRAIN
+   ============================================================ */
+.grain{
+  position:fixed; inset:-50%;
+  width:200%; height:200%;
+  pointer-events:none;
+  z-index:9000;
+  opacity:.04;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation:grainShift 8s steps(6) infinite;
+  will-change:transform;
+}
+@keyframes grainShift{
+  0%{transform:translate(0,0)} 20%{transform:translate(-3%,2%)}
+  40%{transform:translate(2%,-3%)} 60%{transform:translate(-2%,-2%)}
+  80%{transform:translate(3%,1%)} 100%{transform:translate(0,0)}
+}
+
+/* ============================================================
+   5. LOADER
+   ============================================================ */
+#loader{
+  position:fixed; inset:0; z-index:10000;
+  background:var(--ink);
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  gap:30px;
+  transition:opacity .9s var(--ease-out), visibility .9s;
+}
+#loader.is-done{ opacity:0; visibility:hidden; pointer-events:none; }
+
+.loader-mark{
+  font-family:var(--ff-display);
+  font-size:clamp(3rem,9vw,5rem);
+  font-weight:400;
+  letter-spacing:.24em;
+  color:var(--ivory);
+  line-height:1;
+  padding-left:.24em;
+  opacity:0;
+  transform:translateY(20px);
+  animation:markIn 1.1s var(--ease-out) .15s forwards;
+}
+.loader-mark span{ color:var(--gold); }
+@keyframes markIn{ to{ opacity:1; transform:translateY(0); } }
+
+.loader-sub{
+  font-size:9.5px; letter-spacing:.6em; text-transform:uppercase;
+  color:rgba(245,239,226,.45);
+  padding-left:.6em;
+  opacity:0;
+  animation:fadeIn .9s var(--ease-out) .9s forwards;
+}
+.loader-bar{
+  width:min(220px, 44vw); height:1px;
+  background:rgba(245,239,226,.12);
+  overflow:hidden;
+  opacity:0;
+  animation:fadeIn .6s var(--ease-out) 1.2s forwards;
+}
+.loader-bar i{
+  display:block; height:100%; width:0%;
+  background:linear-gradient(90deg,var(--gold-deep),var(--gold-lt));
+  animation:loadFill 1.5s var(--ease-out) 1.2s forwards;
+}
+@keyframes loadFill{ to{ width:100%; } }
+@keyframes fadeIn{ to{ opacity:1; } }
+
+/* ============================================================
+   6. WELCOME OVERLAY (cinematic)
+   ============================================================ */
+.welcome{
+  position:fixed; inset:0; z-index:9990;
+  background:var(--ink);
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  padding:40px 24px;
+  text-align:center;
+  opacity:0; visibility:hidden;
+  transition:opacity 1.1s var(--ease-out), visibility 1.1s;
+}
+.welcome.is-show{ opacity:1; visibility:visible; }
+.welcome.is-hide{ opacity:0; visibility:hidden; }
+
+.welcome__deco{
+  position:absolute; left:50%; top:50%;
+  transform:translate(-50%,-50%);
+  width:min(560px, 84vw);
+  height:min(560px, 84vw);
+  pointer-events:none;
+  opacity:.14;
+}
+.welcome__deco svg{ width:100%; height:100%; }
+.welcome__deco circle,
+.welcome__deco path{
+  stroke:var(--gold);
+  fill:none;
+  stroke-width:.5;
+}
+
+.welcome__inner{
+  position:relative; z-index:2;
+  max-width:700px;
+  display:flex; flex-direction:column; align-items:center;
+  gap:26px;
+}
+
+.welcome__mark{
+  font-family:var(--ff-display);
+  font-size:clamp(2rem,5vw,2.8rem);
+  letter-spacing:.32em;
+  color:var(--gold);
+  padding-left:.32em;
+  opacity:0;
+  transform:translateY(14px);
+  transition:opacity 1s var(--ease-out), transform 1s var(--ease-out);
+}
+.welcome.is-show .welcome__mark{ opacity:1; transform:translateY(0); transition-delay:.25s; }
+
+.welcome__rule{
+  width:64px; height:1px; background:var(--gold);
+  opacity:0;
+  transform:scaleX(0);
+  transition:opacity .8s var(--ease-out), transform .9s var(--ease-out);
+  transform-origin:center;
+}
+.welcome.is-show .welcome__rule{ opacity:.7; transform:scaleX(1); transition-delay:.5s; }
+
+.welcome__heading{
+  font-family:var(--ff-display);
+  font-size:clamp(1.6rem, 4.2vw, 2.8rem);
+  font-weight:300;
+  line-height:1.25;
+  letter-spacing:-.005em;
+  color:var(--ivory);
+  opacity:0;
+  transform:translateY(16px);
+  transition:opacity 1s var(--ease-out), transform 1s var(--ease-out);
+}
+.welcome.is-show .welcome__heading{ opacity:1; transform:translateY(0); transition-delay:.75s; }
+.welcome__heading em{
+  font-style:italic;
+  color:var(--gold-lt);
+}
+
+.welcome__text{
+  font-size:clamp(.9rem, 1.2vw, 1rem);
+  line-height:1.9;
+  color:rgba(245,239,226,.62);
+  max-width:44ch;
+  opacity:0;
+  transform:translateY(14px);
+  transition:opacity 1s var(--ease-out), transform 1s var(--ease-out);
+}
+.welcome.is-show .welcome__text{ opacity:1; transform:translateY(0); transition-delay:1.05s; }
+
+.welcome__enter{
+  margin-top:8px;
+  font-size:10px; letter-spacing:.5em; text-transform:uppercase;
+  color:rgba(245,239,226,.35);
+  padding-left:.5em;
+  opacity:0;
+  transition:opacity 1s var(--ease-out);
+}
+.welcome.is-show .welcome__enter{
+  opacity:1; transition-delay:1.35s;
+  animation:pulseSoft 2.4s var(--ease) 2.6s infinite;
+}
+@keyframes pulseSoft{
+  0%,100%{ opacity:.35; } 50%{ opacity:.85; }
+}
+
+/* ============================================================
+   7. NAVIGATION
+   ============================================================ */
+.nav{
+  position:fixed; top:0; left:0; right:0; z-index:800;
+  transition:background .6s var(--ease), backdrop-filter .6s var(--ease),
+             border-color .6s var(--ease), padding .5s var(--ease);
+  border-bottom:1px solid transparent;
+  padding-block:clamp(14px, 2vw, 24px);
+}
+.nav::before{
+  content:""; position:absolute; inset:0; z-index:-1;
+  background:rgba(10,9,8,.78);
+  backdrop-filter:blur(18px) saturate(140%);
+  -webkit-backdrop-filter:blur(18px) saturate(140%);
+  opacity:0; transition:opacity .5s var(--ease);
+}
+.nav.is-scrolled{ padding-block:12px; border-bottom-color:var(--line-dark); }
+.nav.is-scrolled::before{ opacity:1; }
+
+.nav__inner{
+  display:flex; align-items:center; justify-content:space-between; gap:24px;
+}
+.nav__brand{ display:flex; align-items:center; gap:14px; flex-shrink:0; }
+.brand-mark{
+  width:46px; height:46px; flex:0 0 46px;
+  border:1px solid var(--line-gold);
+  display:grid; place-items:center;
+  font-family:var(--ff-display);
+  font-size:19px; letter-spacing:.04em;
+  color:var(--gold);
+  background:rgba(201,169,97,.05);
+  transition:background .5s var(--ease), color .5s var(--ease);
+}
+.nav__brand:hover .brand-mark{ background:var(--gold); color:var(--ink); }
+.brand-text{ display:flex; flex-direction:column; line-height:1.1; }
+.brand-text b{
+  font-family:var(--ff-display); font-weight:500;
+  font-size:21px; letter-spacing:.14em; color:var(--ivory);
+}
+.brand-text small{
+  font-size:8px; letter-spacing:.4em; text-transform:uppercase;
+  color:rgba(245,239,226,.5); margin-top:4px;
+}
+
+.nav__links{ display:flex; align-items:center; gap:clamp(16px,2.2vw,32px); }
+.nav__link{
+  position:relative;
+  font-size:10.5px; letter-spacing:.24em; text-transform:uppercase;
+  color:rgba(245,239,226,.72); font-weight:400;
+  padding-block:6px;
+  transition:color .4s var(--ease);
+}
+.nav__link::after{
+  content:""; position:absolute; left:0; bottom:0;
+  width:100%; height:1px; background:var(--gold);
+  transform:scaleX(0); transform-origin:right;
+  transition:transform .55s var(--ease-out);
+}
+.nav__link:hover,.nav__link.is-active{ color:var(--ivory); }
+.nav__link:hover::after,.nav__link.is-active::after{
+  transform:scaleX(1); transform-origin:left;
+}
+
+.nav__cta{
+  display:inline-flex; align-items:center; gap:10px;
+  font-size:10px; letter-spacing:.24em; text-transform:uppercase; font-weight:500;
+  padding:13px 24px;
+  border:1px solid var(--line-gold);
+  color:var(--gold-lt);
+  position:relative; overflow:hidden;
+  transition:color .5s var(--ease), border-color .5s var(--ease);
+}
+.nav__cta span{ position:relative; z-index:2; }
+.nav__cta::before{
+  content:""; position:absolute; inset:0;
+  background:var(--gold);
+  transform:translateY(101%);
+  transition:transform .55s var(--ease-out);
+  z-index:1;
+}
+.nav__cta:hover{ color:var(--ink); border-color:var(--gold); }
+.nav__cta:hover::before{ transform:translateY(0); }
+
+.burger{
+  display:none; width:44px; height:44px;
+  align-items:center; justify-content:center;
+  position:relative; z-index:900;
+}
+.burger i{
+  display:block; width:24px; height:1px; background:var(--ivory);
+  position:relative; transition:background .3s;
+}
+.burger i::before,.burger i::after{
+  content:""; position:absolute; left:0; width:24px; height:1px;
+  background:var(--ivory); transition:transform .5s var(--ease-out), top .3s;
+}
+.burger i::before{ top:-7px; }
+.burger i::after{ top:7px; }
+.burger.is-open i{ background:transparent; }
+.burger.is-open i::before{ top:0; transform:rotate(45deg); }
+.burger.is-open i::after{ top:0; transform:rotate(-45deg); }
+
+.drawer{
+  position:fixed; inset:0; z-index:850;
+  background:var(--ink);
+  display:flex; flex-direction:column; justify-content:center;
+  padding:100px var(--gutter) 48px;
+  clip-path:circle(0% at calc(100% - 46px) 42px);
+  transition:clip-path .9s var(--ease-out);
+  visibility:hidden;
+}
+.drawer.is-open{ clip-path:circle(150% at calc(100% - 46px) 42px); visibility:visible; }
+.drawer__links{ display:flex; flex-direction:column; gap:2px; }
+.drawer__link{
+  font-family:var(--ff-display);
+  font-size:clamp(2rem, 8.5vw, 3rem);
+  font-weight:400;
+  line-height:1.35;
+  color:var(--ivory);
+  opacity:0; transform:translateY(24px);
+  transition:opacity .7s var(--ease-out), transform .7s var(--ease-out), color .3s;
+  display:flex; align-items:baseline; gap:16px;
+}
+.drawer__link em{
+  font-style:normal; font-family:var(--ff-body);
+  font-size:10px; letter-spacing:.24em; color:var(--gold); opacity:.7;
+}
+.drawer.is-open .drawer__link{ opacity:1; transform:translateY(0); }
+.drawer__link:hover{ color:var(--gold-lt); }
+.drawer__foot{
+  margin-top:auto; padding-top:38px; border-top:1px solid var(--line-dark);
+  display:flex; flex-wrap:wrap; gap:14px 26px; align-items:center;
+  font-size:12px; letter-spacing:.08em; color:rgba(245,239,226,.55);
+  opacity:0; transition:opacity .7s var(--ease) .5s;
+}
+.drawer.is-open .drawer__foot{ opacity:1; }
+.drawer__foot a:hover{ color:var(--gold-lt); }
+
+/* ============================================================
+   8. BUTTONS
+   ============================================================ */
+.btn{
+  position:relative; display:inline-flex; align-items:center; justify-content:center;
+  gap:12px;
+  padding:17px 34px;
+  font-size:10.5px; letter-spacing:.28em; text-transform:uppercase; font-weight:500;
+  border:1px solid transparent;
+  overflow:hidden;
+  transition:color .5s var(--ease), border-color .5s var(--ease), transform .35s var(--ease);
+  white-space:nowrap;
+}
+.btn span,.btn svg{ position:relative; z-index:2; }
+.btn svg{ width:14px; height:14px; transition:transform .5s var(--ease-out); }
+.btn:hover svg{ transform:translateX(5px); }
+.btn::before{
+  content:""; position:absolute; inset:0; z-index:1;
+  transition:transform .6s var(--ease-out);
+}
+.btn--gold{ background:var(--gold); color:var(--ink); border-color:var(--gold); }
+.btn--gold::before{ background:var(--ivory); transform:translateY(101%); }
+.btn--gold:hover{ color:var(--ink); }
+.btn--gold:hover::before{ transform:translateY(0); }
+
+.btn--ghost{ border-color:rgba(245,239,226,.3); color:var(--ivory); }
+.btn--ghost::before{ background:var(--ivory); transform:translateY(101%); }
+.btn--ghost:hover{ color:var(--ink); border-color:var(--ivory); }
+.btn--ghost:hover::before{ transform:translateY(0); }
+
+.btn--ghost-dark{ border-color:rgba(10,9,8,.28); color:var(--ink); }
+.btn--ghost-dark::before{ background:var(--ink); transform:translateY(101%); }
+.btn--ghost-dark:hover{ color:var(--ivory); border-color:var(--ink); }
+.btn--ghost-dark:hover::before{ transform:translateY(0); }
+
+.btn--line{
+  padding:10px 0; border:0; border-bottom:1px solid var(--line-gold);
+  color:var(--gold-lt); letter-spacing:.28em;
+}
+.btn--line::before{ display:none; }
+.btn--line:hover{ color:var(--ivory); border-color:var(--ivory); }
+
+.btn:active{ transform:scale(.98); }
+
+/* ============================================================
+   9. HERO
+   ============================================================ */
+.hero{
+  position:relative;
+  min-height:100svh;
+  display:flex; align-items:center;
+  overflow:hidden;
+  isolation:isolate;
+}
+.hero__media{
+  position:absolute; inset:-8% 0 -8% 0;
+  z-index:-2;
+  will-change:transform;
+}
+.hero__media img{
+  width:100%; height:100%; object-fit:cover; object-position:center 50%;
+  transform:scale(1.08);
+  animation:heroZoom 16s var(--ease-out) forwards;
+}
+@keyframes heroZoom{ from{ transform:scale(1.18); } to{ transform:scale(1.02); } }
+
+.hero__scrim{
+  position:absolute; inset:0; z-index:-1;
+  background:
+    linear-gradient(180deg, rgba(10,9,8,.88) 0%, rgba(10,9,8,.5) 30%, rgba(10,9,8,.72) 72%, var(--ink) 100%),
+    radial-gradient(110% 80% at 15% 55%, rgba(10,9,8,.72) 0%, transparent 62%);
+}
+.hero__vignette{
+  position:absolute; inset:0; z-index:-1;
+  background:radial-gradient(120% 100% at 50% 50%, transparent 40%, rgba(10,9,8,.78) 100%);
+}
+
+.hero__inner{
+  position:relative;
+  width:100%;
+  padding-block:clamp(130px, 18vh, 210px) clamp(100px, 14vh, 150px);
+}
+.hero__content{ max-width:min(960px, 94%); }
+
+.hero h1{
+  font-family:var(--ff-display);
+  font-weight:400;
+  font-size:clamp(2.9rem, 8.6vw, 7.4rem);
+  line-height:.98;
+  letter-spacing:-.022em;
+  margin:28px 0 0;
+  color:var(--ivory);
+}
+.hero h1 .line{ display:block; overflow:hidden; }
+.hero h1 .line > span{
+  display:block;
+  transform:translateY(115%);
+}
+.hero.is-ready h1 .line > span{
+  animation:lineUp 1.3s var(--ease-out) forwards;
+}
+.hero.is-ready h1 .line:nth-child(1) > span{ animation-delay:.15s; }
+.hero.is-ready h1 .line:nth-child(2) > span{ animation-delay:.3s; }
+@keyframes lineUp{ to{ transform:translateY(0); } }
+
+.hero__eyebrow{ opacity:0; }
+.hero.is-ready .hero__eyebrow{ animation:fadeUp 1s var(--ease-out) 0s forwards; }
+
+.hero__sub{
+  margin-top:28px; max-width:50ch;
+  font-size:clamp(.98rem, 1.3vw, 1.1rem);
+  line-height:1.9;
+  color:rgba(245,239,226,.72);
+  opacity:0;
+}
+.hero.is-ready .hero__sub{ animation:fadeUp 1s var(--ease-out) .65s forwards; }
+
+.hero__ctas{
+  margin-top:44px;
+  display:flex; flex-wrap:wrap; gap:14px;
+  opacity:0;
+}
+.hero.is-ready .hero__ctas{ animation:fadeUp 1s var(--ease-out) .85s forwards; }
+
+.hero__meta{
+  margin-top:48px;
+  display:flex; flex-wrap:wrap; align-items:center; gap:16px 32px;
+  font-size:10.5px; letter-spacing:.24em; text-transform:uppercase;
+  color:rgba(245,239,226,.5);
+  opacity:0;
+}
+.hero.is-ready .hero__meta{ animation:fadeUp 1s var(--ease-out) 1.05s forwards; }
+.hero__meta i{
+  display:inline-block; width:5px; height:5px; background:var(--gold);
+  transform:rotate(45deg); margin-right:12px; vertical-align:middle;
+}
+@keyframes fadeUp{ from{opacity:0; transform:translateY(28px);} to{opacity:1; transform:translateY(0);} }
+
+.hero__scroll{
+  position:absolute; left:50%; bottom:28px; transform:translateX(-50%);
+  display:flex; flex-direction:column; align-items:center; gap:12px;
+  font-size:9px; letter-spacing:.42em; text-transform:uppercase;
+  color:rgba(245,239,226,.42);
+  opacity:0;
+  z-index:3;
+}
+.hero.is-ready .hero__scroll{ animation:fadeUp 1s var(--ease-out) 1.35s forwards; }
+.hero__scroll i{
+  width:1px; height:56px; background:linear-gradient(180deg,var(--gold),transparent);
+  display:block; position:relative; overflow:hidden;
+}
+.hero__scroll i::after{
+  content:""; position:absolute; top:-56px; left:0; width:1px; height:56px;
+  background:var(--gold-lt);
+  animation:scrollDot 2.6s var(--ease) infinite;
+}
+@keyframes scrollDot{ 0%{top:-56px} 60%,100%{top:56px} }
+
+/* ============================================================
+   10. INTRO
+   ============================================================ */
+.intro{ background:var(--ivory); color:var(--ink); overflow:hidden; }
+.intro__grid{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:clamp(40px, 6vw, 100px);
+  align-items:center;
+}
+.intro h2{
+  font-family:var(--ff-display); font-weight:400;
+  font-size:clamp(2rem, 4.1vw, 3.6rem);
+  line-height:1.12; letter-spacing:-.015em;
+  margin:24px 0 32px;
+  max-width:20ch;
+}
+.intro h2 em{ font-style:italic; color:var(--gold-dk); }
+.intro p + p{ margin-top:22px; }
+
+.intro__stats{
+  margin-top:48px; display:flex; flex-wrap:wrap; gap:36px 56px;
+  padding-top:36px; border-top:1px solid var(--line-light);
+}
+.stat b{
+  display:block;
+  font-family:var(--ff-display); font-size:clamp(1.8rem,3.2vw,2.6rem);
+  font-weight:500; line-height:1; color:var(--ink);
+}
+.stat span{
+  display:block; margin-top:10px;
+  font-size:9.5px; letter-spacing:.28em; text-transform:uppercase;
+  color:rgba(10,9,8,.5);
+}
+
+.intro__media{ position:relative; }
+.intro__media figure{
+  margin:0; position:relative; overflow:hidden;
+  aspect-ratio:4/5;
+  border-radius:1px;
+}
+.intro__media img{
+  width:100%; height:100%; object-fit:cover;
+  transition:transform 1.6s var(--ease-out);
+}
+.intro__media:hover img{ transform:scale(1.05); }
+.intro__media::after{
+  content:""; position:absolute; inset:16px -16px -16px 16px;
+  border:1px solid var(--line-gold); z-index:-1; pointer-events:none;
+}
+.intro__badge{
+  position:absolute; left:-1px; bottom:-1px;
+  background:var(--ink); color:var(--ivory);
+  padding:22px 30px;
+  display:flex; flex-direction:column; gap:4px;
+}
+.intro__badge b{
+  font-family:var(--ff-display); font-size:1.6rem; font-weight:500;
+  color:var(--gold-lt); line-height:1;
+}
+.intro__badge span{
+  font-size:9px; letter-spacing:.28em; text-transform:uppercase;
+  color:rgba(245,239,226,.6);
+  margin-top:6px;
+}
+
+/* ============================================================
+   11. SIGNATURE DISHES
+   ============================================================ */
+.signatures{ background:var(--ink); overflow:hidden; }
+.sec-head{
+  display:flex; flex-wrap:wrap; align-items:flex-end;
+  justify-content:space-between; gap:28px;
+  margin-bottom:clamp(40px, 5vw, 72px);
+}
+.sec-head h2{
+  font-family:var(--ff-display); font-weight:400;
+  font-size:clamp(2.2rem, 5.6vw, 4.8rem);
+  line-height:1; letter-spacing:-.02em;
+  margin-top:22px;
+}
+
+.dishes{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:clamp(16px, 2vw, 28px);
+}
+.dish{
+  position:relative; overflow:hidden;
+  aspect-ratio:3/4;
+  display:block;
+  background:var(--ink-3);
+}
+.dish img{
+  position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
+  transition:transform 1.7s var(--ease-out), filter .9s var(--ease);
+  filter:saturate(.92) brightness(.82);
+}
+.dish::after{
+  content:""; position:absolute; inset:0;
+  background:linear-gradient(180deg, rgba(10,9,8,.08) 0%, rgba(10,9,8,.22) 42%, rgba(10,9,8,.94) 100%);
+  transition:opacity .8s var(--ease);
+}
+.dish:hover img{ transform:scale(1.08); filter:saturate(1.02) brightness(.96); }
+
+.dish__body{
+  position:absolute; left:0; right:0; bottom:0; z-index:3;
+  padding:clamp(22px,2.4vw,34px);
+  transition:transform .7s var(--ease-out);
+}
+.dish:hover .dish__body{ transform:translateY(-8px); }
+.dish__tag{
+  font-size:9.5px; letter-spacing:.34em; text-transform:uppercase;
+  color:var(--gold-lt); opacity:.92;
+}
+.dish__name{
+  font-family:var(--ff-display); font-size:clamp(1.35rem,2.2vw,1.95rem);
+  font-weight:500; line-height:1.15; margin-top:12px; color:var(--ivory);
+}
+.dish__desc{
+  font-size:12.5px; line-height:1.65; color:rgba(245,239,226,.6);
+  margin-top:10px;
+  max-height:0; opacity:0; overflow:hidden;
+  transition:max-height .7s var(--ease-out), opacity .6s var(--ease), margin .5s;
+}
+.dish:hover .dish__desc,
+.dish:focus-visible .dish__desc{ max-height:90px; opacity:1; }
+.dish__line{
+  height:1px; width:36px; background:var(--gold);
+  margin-top:16px; transform-origin:left;
+  transform:scaleX(0); transition:transform .7s var(--ease-out) .05s;
+}
+.dish:hover .dish__line,
+.dish:focus-visible .dish__line{ transform:scaleX(1); width:68px; }
+
+/* ============================================================
+   12. MENU
+   ============================================================ */
+.menu{ background:var(--ink-soft); }
+.menu__tabs{
+  display:flex; gap:8px; overflow-x:auto;
+  padding-bottom:18px; margin-bottom:clamp(34px,4.5vw,58px);
+  border-bottom:1px solid var(--line-dark);
+  scrollbar-width:none;
+}
+.menu__tabs::-webkit-scrollbar{ display:none; }
+.tab{
+  position:relative; flex:0 0 auto;
+  padding:12px 20px;
+  font-size:10.5px; letter-spacing:.24em; text-transform:uppercase;
+  color:rgba(245,239,226,.5);
+  transition:color .4s var(--ease);
+  white-space:nowrap;
+}
+.tab::after{
+  content:""; position:absolute; left:16px; right:16px; bottom:-19px;
+  height:1px; background:var(--gold);
+  transform:scaleX(0); transform-origin:center;
+  transition:transform .55s var(--ease-out);
+}
+.tab:hover{ color:var(--ivory); }
+.tab.is-active{ color:var(--gold-lt); }
+.tab.is-active::after{ transform:scaleX(1); }
+
+.menu__panel{ animation:panelIn .6s var(--ease-out); }
+@keyframes panelIn{ from{opacity:0; transform:translateY(16px);} to{opacity:1; transform:translateY(0);} }
+
+.menu__list{
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0,1fr));
+  gap:0 clamp(40px, 5vw, 96px);
+}
+.mitem{
+  display:flex; align-items:baseline; gap:20px;
+  padding:24px 0;
+  border-bottom:1px solid var(--line-dark);
+  transition:padding-left .5s var(--ease-out);
+  opacity:0; transform:translateY(14px);
+  animation:itemIn .7s var(--ease-out) forwards;
+}
+@keyframes itemIn{ to{opacity:1; transform:translateY(0);} }
+.mitem:hover{ padding-left:10px; }
+.mitem__text{ flex:1 1 auto; min-width:0; }
+.mitem__name{
+  font-family:var(--ff-display);
+  font-size:clamp(1.15rem,1.7vw,1.45rem);
+  font-weight:500; line-height:1.25; color:var(--ivory);
+  transition:color .4s var(--ease);
+}
+.mitem:hover .mitem__name{ color:var(--gold-lt); }
+.mitem__desc{
+  font-size:12.5px; line-height:1.65;
+  color:rgba(245,239,226,.45);
+  margin-top:8px;
+}
+.mitem__veg{
+  display:inline-block;
+  width:10px; height:10px; border:1px solid var(--gold);
+  position:relative; margin-right:8px;
+}
+.mitem__veg::before{
+  content:""; position:absolute; inset:2px; border-radius:50%;
+}
+.mitem__veg--veg::before{ background:#6f9b52; }
+.mitem__veg--nv::before{ background:#a83a3a; }
+.mitem__price{
+  flex:0 0 auto;
+  font-family:var(--ff-display); font-size:1.15rem; font-weight:500;
+  color:var(--gold); letter-spacing:.02em;
+  padding-top:2px;
+}
+.mitem__price--soft{
+  font-family:var(--ff-body);
+  font-size:9.5px; letter-spacing:.28em; text-transform:uppercase;
+  color:rgba(201,169,97,.6);
+}
+
+.menu__empty{
+  grid-column:1/-1;
+  text-align:center; padding:clamp(44px,7vw,88px) 20px;
+  border:1px solid var(--line-dark);
+  background:rgba(245,239,226,.015);
+}
+.menu__empty h3{
+  font-family:var(--ff-display); font-size:clamp(1.5rem,2.8vw,2.1rem);
+  font-weight:500; color:var(--ivory);
+}
+.menu__empty p{
+  margin:16px auto 28px; max-width:46ch;
+  font-size:14px; color:rgba(245,239,226,.55); line-height:1.85;
+}
+.menu__note{
+  margin-top:48px; padding-top:28px; border-top:1px solid var(--line-dark);
+  font-size:11.5px; letter-spacing:.06em; color:rgba(245,239,226,.4);
+  display:flex; flex-wrap:wrap; gap:12px 28px; justify-content:space-between;
+  align-items:center;
+}
+
+/* ============================================================
+   13. EXPERIENCE
+   ============================================================ */
+.experience{ background:var(--ivory); color:var(--ink); }
+.exp-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:0;
+  border-top:1px solid var(--line-light);
+  border-left:1px solid var(--line-light);
+  margin-top:clamp(36px,4.5vw,60px);
+}
+.exp-item{
+  padding:clamp(26px,2.8vw,42px) clamp(22px,2.4vw,34px);
+  border-right:1px solid var(--line-light);
+  border-bottom:1px solid var(--line-light);
+  transition:background .6s var(--ease);
+  position:relative;
+}
+.exp-item::before{
+  content:""; position:absolute; left:0; top:0; height:1px; width:100%;
+  background:var(--gold); transform:scaleX(0); transform-origin:left;
+  transition:transform .7s var(--ease-out);
+}
+.exp-item:hover{ background:rgba(201,169,97,.06); }
+.exp-item:hover::before{ transform:scaleX(1); }
+.exp-item svg{
+  width:22px; height:22px; stroke:var(--gold-dk); stroke-width:1.2;
+  fill:none; stroke-linecap:round; stroke-linejoin:round;
+  transition:transform .55s var(--ease-out);
+}
+.exp-item:hover svg{ transform:translateY(-3px); }
+.exp-item h3{
+  font-family:var(--ff-display); font-size:1.3rem; font-weight:500;
+  margin-top:22px; letter-spacing:.005em;
+}
+.exp-item p{
+  margin-top:10px; font-size:12.5px; line-height:1.7;
+  color:rgba(10,9,8,.55);
+}
+
+.exp-foot{
+  margin-top:clamp(40px,5vw,64px);
+  display:flex; flex-wrap:wrap; align-items:center;
+  justify-content:space-between; gap:30px;
+}
+.exp-foot p{
+  font-family:var(--ff-display);
+  font-size:clamp(1.2rem,2vw,1.7rem);
+  font-style:italic; color:var(--ink); max-width:38ch; line-height:1.4;
+}
+.tags{ display:flex; flex-wrap:wrap; gap:10px; }
+.tag{
+  font-size:9.5px; letter-spacing:.26em; text-transform:uppercase;
+  padding:10px 18px; border:1px solid var(--line-light);
+  color:rgba(10,9,8,.6);
+  transition:all .45s var(--ease);
+}
+.tag:hover{ border-color:var(--gold); color:var(--gold-dk); background:rgba(201,169,97,.07); }
+
+/* ============================================================
+   14. GALLERY
+   ============================================================ */
+.gallery{ background:var(--ink); }
+.masonry{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  grid-auto-rows:clamp(140px, 15vw, 220px);
+  gap:clamp(10px, 1.2vw, 18px);
+  margin-top:clamp(36px,4.5vw,60px);
+}
+.gitem{
+  position:relative; overflow:hidden; cursor:pointer;
+  background:var(--ink-3);
+  display:block; width:100%; height:100%;
+  padding:0; border:0;
+}
+.gitem img{
+  width:100%; height:100%; object-fit:cover;
+  transition:transform 1.7s var(--ease-out), filter .8s var(--ease);
+  filter:brightness(.82) saturate(.95);
+}
+.gitem::after{
+  content:""; position:absolute; inset:0;
+  background:linear-gradient(180deg,transparent 40%, rgba(10,9,8,.9) 100%);
+  opacity:0; transition:opacity .7s var(--ease);
+}
+.gitem:hover img,.gitem:focus-visible img{ transform:scale(1.08); filter:brightness(.96) saturate(1.05); }
+.gitem:hover::after,.gitem:focus-visible::after{ opacity:1; }
+.gitem__cap{
+  position:absolute; left:0; right:0; bottom:0; z-index:2;
+  padding:24px;
+  text-align:left;
+  transform:translateY(10px); opacity:0;
+  transition:transform .7s var(--ease-out), opacity .6s var(--ease);
+}
+.gitem:hover .gitem__cap,.gitem:focus-visible .gitem__cap{ transform:translateY(0); opacity:1; }
+.gitem__cap b{
+  display:block; font-family:var(--ff-display); font-weight:500;
+  font-size:1.15rem; color:var(--ivory);
+}
+.gitem__cap span{
+  display:block; margin-top:5px;
+  font-size:9px; letter-spacing:.3em; text-transform:uppercase; color:var(--gold-lt);
+}
+.g-a{ grid-column:span 2; grid-row:span 2; }
+.g-b{ grid-column:span 1; grid-row:span 1; }
+.g-c{ grid-column:span 1; grid-row:span 2; }
+.g-d{ grid-column:span 2; grid-row:span 1; }
+
+/* Lightbox */
+.lightbox{
+  position:fixed; inset:0; z-index:9500;
+  background:rgba(5,4,4,.97);
+  backdrop-filter:blur(8px);
+  display:flex; align-items:center; justify-content:center;
+  padding:clamp(16px,4vw,56px);
+  opacity:0; visibility:hidden;
+  transition:opacity .5s var(--ease), visibility .5s;
+}
+.lightbox.is-open{ opacity:1; visibility:visible; }
+.lightbox__fig{
+  margin:0; max-width:min(1220px,100%); max-height:100%;
+  display:flex; flex-direction:column; gap:20px;
+  transform:scale(.96); opacity:0;
+  transition:transform .7s var(--ease-out) .06s, opacity .6s var(--ease) .06s;
+}
+.lightbox.is-open .lightbox__fig{ transform:scale(1); opacity:1; }
+.lightbox__fig img{
+  max-height:76vh; width:auto; margin-inline:auto;
+  object-fit:contain;
+}
+.lightbox__cap{
+  display:flex; align-items:baseline; justify-content:space-between; gap:20px;
+  font-size:11px; letter-spacing:.24em; text-transform:uppercase;
+  color:rgba(245,239,226,.6);
+}
+.lightbox__cap b{
+  font-family:var(--ff-display); font-size:1.35rem; font-weight:500;
+  letter-spacing:.01em; text-transform:none; color:var(--ivory);
+}
+.lb-btn{
+  position:absolute; z-index:3;
+  width:56px; height:56px;
+  display:grid; place-items:center;
+  border:1px solid rgba(245,239,226,.22);
+  color:var(--ivory); border-radius:999px;
+  transition:background .4s var(--ease), color .4s var(--ease), border-color .4s;
+}
+.lb-btn:hover{ background:var(--gold); color:var(--ink); border-color:var(--gold); }
+.lb-btn svg{ width:18px; height:18px; stroke:currentColor; fill:none; stroke-width:1.4; }
+.lb-close{ top:clamp(16px,3vw,32px); right:clamp(16px,3vw,32px); }
+.lb-prev{ left:clamp(10px,2.4vw,32px); top:50%; transform:translateY(-50%); }
+.lb-next{ right:clamp(10px,2.4vw,32px); top:50%; transform:translateY(-50%); }
+
+/* ============================================================
+   15. REVIEWS
+   ============================================================ */
+.reviews{ background:var(--ink); }
+.reviews__head{
+  display:grid; grid-template-columns:.85fr 1.15fr;
+  gap:clamp(40px,6vw,90px); align-items:center;
+  margin-bottom:clamp(40px,5vw,68px);
+  padding-bottom:clamp(40px,5vw,68px);
+  border-bottom:1px solid var(--line-dark);
+}
+.rating-block{ text-align:left; }
+.rating-num{
+  font-family:var(--ff-display);
+  font-size:clamp(4.5rem, 11vw, 8.5rem);
+  line-height:.86; font-weight:400;
+  color:var(--ivory);
+}
+.rating-num sup{
+  font-size:.32em; color:var(--gold); vertical-align:super;
+  letter-spacing:0;
+}
+.stars{ display:flex; gap:7px; margin-top:22px; }
+.stars svg{
+  width:18px; height:18px; fill:var(--gold);
+  opacity:0; transform:scale(.5) rotate(-25deg);
+  animation:starPop .65s var(--ease-out) forwards;
+}
+.stars svg:nth-child(1){ animation-delay:.15s }
+.stars svg:nth-child(2){ animation-delay:.25s }
+.stars svg:nth-child(3){ animation-delay:.35s }
+.stars svg:nth-child(4){ animation-delay:.45s }
+.stars svg:nth-child(5){ animation-delay:.55s; fill:rgba(201,169,97,.32); }
+@keyframes starPop{ to{ opacity:1; transform:scale(1) rotate(0); } }
+.rating-count{
+  margin-top:18px; font-size:10.5px; letter-spacing:.3em; text-transform:uppercase;
+  color:rgba(245,239,226,.45);
+}
+.reviews__intro p{
+  font-family:var(--ff-display);
+  font-size:clamp(1.4rem,2.6vw,2.1rem);
+  line-height:1.5; font-weight:400;
+  color:var(--ivory);
+  font-style:italic;
+  max-width:32ch;
+}
+
+.review-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:clamp(16px,2vw,26px);
+}
+.review-card{
+  padding:clamp(26px,2.8vw,40px) clamp(24px,2.4vw,36px);
+  border:1px solid var(--line-dark);
+  background:rgba(245,239,226,.015);
+  position:relative;
+  transition:background .6s var(--ease), border-color .6s var(--ease);
+  display:flex; flex-direction:column;
+}
+.review-card::before{
+  content:""; position:absolute; left:0; top:0; width:0; height:2px;
+  background:var(--gold); transition:width .7s var(--ease-out);
+}
+.review-card:hover{ background:rgba(201,169,97,.05); border-color:var(--line-gold); }
+.review-card:hover::before{ width:100%; }
+.review-card__stars{
+  display:flex; gap:4px; margin-bottom:22px;
+}
+.review-card__stars svg{
+  width:14px; height:14px; fill:var(--gold);
+}
+.review-card blockquote{
+  margin:0;
+  font-size:14.5px; line-height:1.85; font-weight:300;
+  color:rgba(245,239,226,.8);
+  font-style:italic;
+  flex:1 1 auto;
+}
+.review-card figcaption{
+  margin-top:28px;
+  padding-top:22px;
+  border-top:1px solid var(--line-dark);
+  display:flex; align-items:center; gap:14px;
+  font-size:10.5px; letter-spacing:.24em; text-transform:uppercase;
+  color:rgba(245,239,226,.55);
+}
+.review-card figcaption i{
+  width:5px; height:5px; background:var(--gold); transform:rotate(45deg);
+  display:inline-block;
+}
+
+.reviews__cta{
+  margin-top:clamp(40px,4.5vw,60px);
+  text-align:center;
+}
+
+/* ============================================================
+   16. RESERVATION
+   ============================================================ */
+.reserve{
+  position:relative;
+  background:var(--ink-soft);
+  overflow:hidden;
+}
+.reserve__bg{
+  position:absolute; inset:0; z-index:0; opacity:.14;
+}
+.reserve__bg img{ width:100%; height:100%; object-fit:cover; }
+.reserve .container{ position:relative; z-index:2; }
+.reserve__grid{
+  display:grid; grid-template-columns:.9fr 1.1fr;
+  gap:clamp(40px,6vw,90px);
+  align-items:start;
+}
+.reserve h2{
+  font-family:var(--ff-display); font-weight:400;
+  font-size:clamp(2.4rem,5.8vw,4.4rem);
+  line-height:1.02; letter-spacing:-.022em;
+  margin-top:24px;
+}
+.reserve__aside p{
+  margin-top:26px; max-width:40ch;
+  color:rgba(245,239,226,.62); font-size:14.5px; line-height:1.95;
+}
+.reserve__contact{
+  margin-top:40px; padding-top:30px; border-top:1px solid var(--line-dark);
+  display:flex; flex-direction:column; gap:14px;
+  font-size:13px; color:rgba(245,239,226,.62);
+}
+.reserve__contact a{ transition:color .3s; }
+.reserve__contact a:hover{ color:var(--gold-lt); }
+
+.form{
+  border:1px solid var(--line-dark);
+  padding:clamp(28px,3.6vw,52px);
+  background:rgba(10,9,8,.5);
+  backdrop-filter:blur(4px);
+}
+.form__row{
+  display:grid; grid-template-columns:1fr 1fr;
+  gap:clamp(18px,2vw,28px);
+}
+.field{ position:relative; margin-bottom:26px; }
+.field label{
+  display:block;
+  font-size:9px; letter-spacing:.3em; text-transform:uppercase;
+  color:rgba(245,239,226,.5); margin-bottom:12px;
+}
+.field input,.field select,.field textarea{
+  width:100%;
+  background:transparent;
+  border:0; border-bottom:1px solid rgba(245,239,226,.16);
+  padding:12px 0;
+  font-size:15px; font-weight:300;
+  color:var(--ivory);
+  border-radius:0;
+  transition:border-color .45s var(--ease);
+  appearance:none; -webkit-appearance:none;
+}
+.field select{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23c9a961' fill='none' stroke-width='1.2'/%3E%3C/svg%3E");
+  background-repeat:no-repeat; background-position:right 2px center;
+  padding-right:24px;
+}
+.field select option{ background:var(--ink-3); color:var(--ivory); }
+.field input:focus,.field select:focus,.field textarea:focus{
+  outline:none; border-bottom-color:var(--gold);
+}
+.field input::placeholder{ color:rgba(245,239,226,.26); }
+.field input[type="date"],.field input[type="time"]{ color-scheme:dark; }
+.field.has-error input,.field.has-error select{ border-bottom-color:#c2564f; }
+.field__err{
+  display:block; margin-top:8px;
+  font-size:10.5px; letter-spacing:.1em; color:#d9776f;
+  opacity:0; max-height:0; transition:opacity .3s, max-height .3s;
+}
+.field.has-error .field__err{ opacity:1; max-height:30px; }
+
+.form__submit{ width:100%; margin-top:8px; }
+.form__hint{
+  margin-top:20px; font-size:11px; line-height:1.75;
+  color:rgba(245,239,226,.35); text-align:center;
+}
+
+.form-success{
+  text-align:center; padding:clamp(30px,5vw,60px) 10px;
+  animation:panelIn .7s var(--ease-out);
+}
+.form-success svg{
+  width:48px; height:48px; stroke:var(--gold); fill:none; stroke-width:1;
+  margin-inline:auto;
+}
+.form-success h3{
+  font-family:var(--ff-display); font-size:clamp(1.7rem,3.2vw,2.4rem);
+  font-weight:500; margin-top:24px; color:var(--ivory);
+}
+.form-success p{
+  margin:16px auto 0; max-width:44ch;
+  font-size:14px; line-height:1.9; color:rgba(245,239,226,.6);
+}
+.form-success .btn{ margin-top:32px; }
+
+/* ============================================================
+   17. LOCATION
+   ============================================================ */
+.location{ background:var(--ivory); color:var(--ink); }
+.loc__grid{
+  display:grid; grid-template-columns:1fr 1fr;
+  gap:clamp(34px,5vw,80px); align-items:stretch;
+  margin-top:clamp(36px,4.5vw,60px);
+}
+.loc__info h3{
+  font-family:var(--ff-display); font-size:clamp(1.55rem,2.6vw,2.15rem);
+  font-weight:500; line-height:1.28; margin-bottom:28px; max-width:22ch;
+}
+.loc__addr{
+  font-size:15px; line-height:2.05; color:rgba(10,9,8,.7);
+  border-left:1px solid var(--line-light);
+  padding-left:24px;
+}
+.loc__addr b{ color:var(--ink); font-weight:500; }
+.loc__rows{ margin-top:36px; display:flex; flex-direction:column; gap:0; }
+.loc__row{
+  display:flex; align-items:center; justify-content:space-between; gap:20px;
+  padding:20px 0; border-top:1px solid var(--line-light);
+  font-size:13px;
+}
+.loc__row span{ font-size:10px; letter-spacing:.26em; text-transform:uppercase; color:rgba(10,9,8,.45); }
+.loc__row a,.loc__row strong{ font-weight:400; color:var(--ink); transition:color .3s; }
+.loc__row a:hover{ color:var(--gold-dk); }
+.loc__actions{ margin-top:36px; display:flex; flex-wrap:wrap; gap:12px; }
+
+.map{
+  position:relative; min-height:400px;
+  border:1px solid var(--line-light);
+  overflow:hidden;
+  background:
+    linear-gradient(rgba(10,9,8,.045) 1px, transparent 1px) 0 0/100% 46px,
+    linear-gradient(90deg, rgba(10,9,8,.045) 1px, transparent 1px) 0 0/46px 100%,
+    linear-gradient(150deg,#eee5d5,#e3d8c2 60%,#ddd0b6);
+  display:flex; align-items:center; justify-content:center;
+  text-decoration:none;
+}
+.map::before,.map::after{
+  content:""; position:absolute; background:rgba(10,9,8,.08);
+}
+.map::before{ left:0; right:0; top:38%; height:16px; }
+.map::after{ top:0; bottom:0; left:56%; width:12px; }
+.map__pin{
+  position:relative; z-index:3; text-align:center;
+  background:rgba(245,239,226,.94);
+  border:1px solid var(--line-light);
+  padding:24px 32px;
+  backdrop-filter:blur(4px);
+  transition:transform .6s var(--ease-out);
+}
+.map:hover .map__pin{ transform:translateY(-6px); }
+.map__pin b{
+  display:block; font-family:var(--ff-display); font-size:1.3rem;
+  font-weight:500; color:var(--ink);
+}
+.map__pin span{
+  display:block; margin-top:8px;
+  font-size:9.5px; letter-spacing:.26em; text-transform:uppercase;
+  color:rgba(10,9,8,.5);
+}
+.map__pin i{
+  display:block; width:9px; height:9px; background:var(--wine);
+  border-radius:50%; margin:0 auto 16px;
+  box-shadow:0 0 0 0 rgba(74,29,43,.5);
+  animation:pinPulse 2.6s var(--ease) infinite;
+}
+@keyframes pinPulse{
+  0%{ box-shadow:0 0 0 0 rgba(74,29,43,.42); }
+  70%{ box-shadow:0 0 0 18px rgba(74,29,43,0); }
+  100%{ box-shadow:0 0 0 0 rgba(74,29,43,0); }
+}
+.map__hint{
+  position:absolute; bottom:18px; left:50%; transform:translateX(-50%);
+  font-size:9.5px; letter-spacing:.26em; text-transform:uppercase;
+  color:rgba(10,9,8,.44); z-index:3; white-space:nowrap;
+}
+
+/* ============================================================
+   18. FOOTER
+   ============================================================ */
+.footer{
+  background:var(--ink);
+  border-top:1px solid var(--line-dark);
+  padding-top:clamp(64px,8vw,120px);
+  overflow:hidden;
+}
+.footer__top{
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr 1.2fr;
+  gap:clamp(30px,4vw,60px);
+  padding-bottom:clamp(52px,6vw,88px);
+}
+.footer__brand .brand-text b{ font-size:22px; }
+.footer__brand p{
+  margin-top:24px; max-width:34ch;
+  font-size:14px; line-height:1.9; color:rgba(245,239,226,.5);
+}
+.footer__social{
+  margin-top:28px; display:flex; gap:10px;
+}
+.footer__social a{
+  width:42px; height:42px; display:grid; place-items:center;
+  border:1px solid var(--line-dark);
+  transition:all .45s var(--ease);
+}
+.footer__social a:hover{
+  border-color:var(--gold); color:var(--gold); transform:translateY(-3px);
+}
+.footer__social svg{
+  width:16px; height:16px; fill:none; stroke:currentColor; stroke-width:1.3;
+}
+.footer__col h4{
+  font-size:10px; letter-spacing:.32em; text-transform:uppercase;
+  color:var(--gold); margin-bottom:24px; font-weight:500;
+}
+.footer__col ul{ display:flex; flex-direction:column; gap:13px; }
+.footer__col a,.footer__col li{
+  font-size:13.5px; color:rgba(245,239,226,.55);
+  transition:color .35s var(--ease);
+}
+.footer__col a:hover{ color:var(--gold-lt); }
+.footer__col address{
+  font-style:normal; font-size:13.5px; line-height:1.95;
+  color:rgba(245,239,226,.55);
+}
+.footer__cta{
+  margin-top:28px; width:100%;
+}
+
+.footer__wordmark{
+  font-family:var(--ff-display);
+  font-size:clamp(3rem, 17vw, 15rem);
+  line-height:.85;
+  letter-spacing:-.03em;
+  color:transparent;
+  -webkit-text-stroke:1px rgba(201,169,97,.16);
+  text-align:center;
+  padding-block:clamp(16px,2vw,32px);
+  user-select:none;
+  white-space:nowrap;
+  overflow:hidden;
+}
+.footer__bottom{
+  border-top:1px solid var(--line-dark);
+  padding-block:28px 92px;
+  display:flex; flex-wrap:wrap; gap:14px 28px;
+  align-items:center; justify-content:space-between;
+  font-size:11px; letter-spacing:.1em;
+  color:rgba(245,239,226,.35);
+}
+.footer__bottom a:hover{ color:var(--gold-lt); }
+.demo-badge{
+  display:inline-flex; align-items:center; gap:8px;
+  border:1px solid var(--line-dark);
+  padding:6px 13px;
+  font-size:9px; letter-spacing:.22em; text-transform:uppercase;
+  color:rgba(245,239,226,.34);
+}
+.demo-badge i{
+  width:5px; height:5px; border-radius:50%; background:var(--gold);
+  display:inline-block; opacity:.75;
+}
+
+/* ============================================================
+   19. FLOATING UI
+   ============================================================ */
+.to-top{
+  position:fixed; right:clamp(16px,2.4vw,32px); bottom:clamp(20px,3vw,36px);
+  z-index:700;
+  width:48px; height:48px; border-radius:999px;
+  display:grid; place-items:center;
+  border:1px solid var(--line-gold);
+  background:rgba(10,9,8,.75);
+  backdrop-filter:blur(10px);
+  color:var(--gold-lt);
+  opacity:0; visibility:hidden; transform:translateY(16px);
+  transition:all .55s var(--ease-out);
+}
+.to-top.is-visible{ opacity:1; visibility:visible; transform:translateY(0); }
+.to-top:hover{ background:var(--gold); color:var(--ink); border-color:var(--gold); }
+.to-top svg{ width:16px; height:16px; stroke:currentColor; fill:none; stroke-width:1.5; }
+
+.mobile-bar{
+  position:fixed; left:0; right:0; bottom:0; z-index:780;
+  display:none;
+  grid-template-columns:repeat(3,1fr);
+  background:rgba(10,9,8,.95);
+  backdrop-filter:blur(14px);
+  border-top:1px solid var(--line-dark);
+  padding-bottom:env(safe-area-inset-bottom, 0);
+  transform:translateY(102%);
+  transition:transform .6s var(--ease-out);
+}
+.mobile-bar.is-visible{ transform:translateY(0); }
+.mobile-bar a{
+  display:flex; flex-direction:column; align-items:center; gap:5px;
+  padding:13px 6px 12px;
+  font-size:9px; letter-spacing:.22em; text-transform:uppercase;
+  color:rgba(245,239,226,.72);
+  border-right:1px solid var(--line-dark);
+}
+.mobile-bar a:last-child{ border-right:0; }
+.mobile-bar a:active{ background:rgba(201,169,97,.12); }
+.mobile-bar svg{
+  width:17px; height:17px; stroke:var(--gold); fill:none; stroke-width:1.3;
+}
+.mobile-bar a.is-accent{ color:var(--ink); background:var(--gold); }
+.mobile-bar a.is-accent svg{ stroke:var(--ink); }
+
+.toast{
+  position:fixed; left:50%; bottom:32px; z-index:9600;
+  transform:translate(-50%, 24px);
+  background:var(--ink-3);
+  border:1px solid var(--line-gold);
+  color:var(--ivory);
+  padding:18px 26px;
+  font-size:12.5px; letter-spacing:.05em;
+  max-width:min(440px, calc(100vw - 32px));
+  text-align:center;
+  opacity:0; visibility:hidden;
+  transition:all .55s var(--ease-out);
+  box-shadow:0 24px 60px rgba(0,0,0,.55);
+}
+.toast.is-visible{ opacity:1; visibility:visible; transform:translate(-50%,0); }
+.toast b{ color:var(--gold-lt); font-weight:500; }
+
+/* ============================================================
+   20. CUSTOM CURSOR
+   ============================================================ */
+.cursor,.cursor-dot{
+  position:fixed; top:0; left:0; z-index:9800;
+  pointer-events:none; border-radius:999px;
+  mix-blend-mode:difference;
+}
+.cursor{
+  width:36px; height:36px; border:1px solid rgba(245,239,226,.55);
+  transition:width .4s var(--ease), height .4s var(--ease),
+             background .4s var(--ease), border-color .4s var(--ease),
+             opacity .3s;
+  transform:translate(-50%,-50%);
+}
+.cursor-dot{
+  width:4px; height:4px; background:var(--gold);
+  transform:translate(-50%,-50%);
+}
+.cursor.is-hover{
+  width:68px; height:68px;
+  background:rgba(245,239,226,.92);
+  border-color:transparent;
+}
+@media (hover:none),(pointer:coarse){
+  .cursor,.cursor-dot{ display:none !important; }
+}
+
+/* ============================================================
+   21. IMAGE FALLBACK
+   ============================================================ */
+.img-fallback{
+  background:radial-gradient(120% 90% at 30% 20%, #2a221b 0%, #16120f 60%, #0d0b0a 100%);
+  position:relative;
+}
+.img-fallback::after{
+  content:"AAHII";
+  position:absolute; inset:0;
+  display:grid; place-items:center;
+  font-family:var(--ff-display); font-size:1rem;
+  letter-spacing:.5em; color:rgba(201,169,97,.35);
+}
+.section--ivory .img-fallback{
+  background:radial-gradient(120% 90% at 30% 20%, #e6dbc6 0%, #d8cbb2 70%, #cbbda1 100%);
+}
+
+/* ============================================================
+   22. SCROLL REVEAL
+   ============================================================ */
+[data-reveal]{
+  opacity:0; transform:translateY(32px);
+  transition:opacity 1.1s var(--ease-out), transform 1.1s var(--ease-out);
+}
+[data-reveal].is-in{ opacity:1; transform:none; }
+[data-reveal="clip"]{
+  opacity:1; transform:none;
+  clip-path:inset(0 0 100% 0);
+  transition:clip-path 1.3s var(--ease-out);
+}
+[data-reveal="clip"].is-in{ clip-path:inset(0 0 0 0); }
+[data-reveal="right"]{ transform:translateX(38px); }
+[data-reveal="right"].is-in{ transform:none; }
+[data-delay="1"]{ transition-delay:.1s; }
+[data-delay="2"]{ transition-delay:.2s; }
+[data-delay="3"]{ transition-delay:.3s; }
+[data-delay="4"]{ transition-delay:.4s; }
+[data-delay="5"]{ transition-delay:.5s; }
+
+/* ============================================================
+   23. RESPONSIVE
+   ============================================================ */
+@media (max-width:1180px){
+  .exp-grid{ grid-template-columns:repeat(2,1fr); }
+  .footer__top{ grid-template-columns:1.4fr 1fr 1fr; }
+  .footer__col--cta{ grid-column:1 / -1; }
+  .review-grid{ grid-template-columns:1fr; gap:0; }
+  .review-card{ border-top:0; }
+}
+
+@media (max-width:1024px){
+  .nav__links{ display:none; }
+  .nav__cta{ display:none; }
+  .burger{ display:flex; }
+
+  .intro__grid,
+  .story__grid,
+  .reserve__grid,
+  .reviews__head,
+  .loc__grid{ grid-template-columns:1fr; gap:clamp(36px,6vw,56px); }
+
+  .intro__media{ order:-1; }
+  .intro__media figure{ aspect-ratio:16/11; }
+  .intro__media::after{ display:none; }
+
+  .dishes{ grid-template-columns:repeat(2,1fr); }
+  .menu__list{ grid-template-columns:1fr; }
+  .masonry{ grid-template-columns:repeat(2,1fr); }
+  .g-a{ grid-column:span 2; grid-row:span 2; }
+  .g-c{ grid-row:span 1; }
+  .g-d{ grid-column:span 2; }
+}
+
+@media (max-width:768px){
+  body{ font-size:15px; }
+  .mobile-bar{ display:grid; }
+  .footer__bottom{ padding-bottom:calc(100px + env(safe-area-inset-bottom, 0)); }
+  .to-top{ bottom:82px; }
+  .toast{ bottom:100px; }
+  .hero__content{ max-width:100%; }
+  .hero__ctas .btn{ flex:1 1 auto; min-width:min(100%, 230px); }
+  .sec-head{ flex-direction:column; align-items:flex-start; }
+
+  .dishes{
+    display:flex;
+    gap:16px;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    padding-bottom:16px;
+    margin-inline:calc(var(--gutter) * -1);
+    padding-inline:var(--gutter);
+    scrollbar-width:none;
+  }
+  .dishes::-webkit-scrollbar{ display:none; }
+  .dish{ flex:0 0 78%; scroll-snap-align:center; aspect-ratio:3/4.1; }
+  .dish__desc{ max-height:90px; opacity:1; }
+
+  .footer__top{ grid-template-columns:1fr 1fr; gap:40px 26px; }
+  .footer__brand{ grid-column:1 / -1; }
+  .footer__col--cta{ grid-column:1 / -1; }
+
+  .form__row{ grid-template-columns:1fr; gap:0; }
+  .form{ padding:28px 22px; }
+  .lightbox__fig img{ max-height:60vh; }
+  .lb-prev{ left:6px; } .lb-next{ right:6px; }
+  .lb-btn{ width:46px; height:46px; }
+  .lb-prev,.lb-next{ top:auto; bottom:24px; transform:none; }
+  .lb-prev{ left:calc(50% - 58px); } .lb-next{ left:calc(50% + 12px); right:auto; }
+  .lightbox__cap{ flex-direction:column; gap:8px; padding-bottom:76px; text-align:center; }
+}
+
+@media (max-width:480px){
+  .dishes .dish{ flex:0 0 86%; }
+  .exp-grid{ grid-template-columns:1fr; }
+  .footer__wordmark{ -webkit-text-stroke-width:.6px; }
+  .intro__stats{ gap:28px 36px; }
+  .gitem__cap{ padding:16px; }
+}
+
+@media (max-width:400px){
+  :root{ --gutter:18px; }
+  .btn{ padding:15px 22px; font-size:10px; letter-spacing:.2em; }
+}
+
+/* ============================================================
+   24. REDUCED MOTION
+   ============================================================ */
+@media (prefers-reduced-motion:reduce){
+  html{ scroll-behavior:auto; }
+  *,*::before,*::after{
+    animation-duration:.001ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.001ms !important;
+    scroll-behavior:auto !important;
+  }
+  .hero__media img{ animation:none; transform:scale(1.02); }
+  .hero h1 .line > span{ transform:none; }
+  .hero__eyebrow,.hero__sub,.hero__ctas,.hero__meta,.hero__scroll{ opacity:1; }
+  .grain{ display:none; }
+  [data-reveal]{ opacity:1 !important; transform:none !important; clip-path:none !important; }
+  .mitem{ opacity:1; transform:none; }
+  .stars svg{ opacity:1; transform:none; }
+  .cursor,.cursor-dot{ display:none !important; }
+  .welcome__mark,.welcome__heading,.welcome__text,.welcome__rule,.welcome__enter{ opacity:1 !important; transform:none !important; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ============================================================
+     LOADER
+     ============================================================ -->
+<div id="loader" role="status" aria-live="polite" aria-label="Loading Aahii">
+  <div class="loader-mark">AAH<span>II</span></div>
+  <div class="loader-sub">Worli · Mumbai</div>
+  <div class="loader-bar"><i></i></div>
+</div>
+
+<!-- ============================================================
+     WELCOME OVERLAY
+     ============================================================ -->
+<div class="welcome" id="welcome" role="status" aria-live="polite" aria-label="Welcome message">
+  <div class="welcome__deco" aria-hidden="true">
+    <svg viewBox="0 0 400 400">
+      <circle cx="200" cy="200" r="160"/>
+      <circle cx="200" cy="200" r="120"/>
+      <circle cx="200" cy="200" r="80"/>
+      <path d="M200 40v320M40 200h320"/>
+      <path d="M87 87l226 226M313 87L87 313"/>
+    </svg>
+  </div>
+
+  <div class="welcome__inner">
+    <div class="welcome__mark">AAHII</div>
+    <div class="welcome__rule" aria-hidden="true"></div>
+    <h2 class="welcome__heading">
+      Welcome to our website.<br />
+      A <em>culinary journey</em> awaits you.
+    </h2>
+    <p class="welcome__text">
+      Step into a world of refined North Indian dining, where heritage meets
+      modernity and every detail is crafted for you.
+    </p>
+    <div class="welcome__enter" id="welcomeEnter">Enter</div>
+  </div>
+</div>
+
+<!-- Film grain -->
+<div class="grain" aria-hidden="true"></div>
+
+<!-- Custom cursor -->
+<div class="cursor" aria-hidden="true"></div>
+<div class="cursor-dot" aria-hidden="true"></div>
+
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<header class="nav" id="nav">
+  <div class="container nav__inner">
+    <a href="#home" class="nav__brand" aria-label="Aahii — home">
+      <span class="brand-mark" aria-hidden="true">A</span>
+      <span class="brand-text">
+        <b>AAHII</b>
+        <small>Worli · Mumbai</small>
+      </span>
+    </a>
+
+    <nav class="nav__links" aria-label="Primary">
+      <a class="nav__link" href="#home">Home</a>
+      <a class="nav__link" href="#about">About</a>
+      <a class="nav__link" href="#menu">Menu</a>
+      <a class="nav__link" href="#experience">Experience</a>
+      <a class="nav__link" href="#gallery">Gallery</a>
+      <a class="nav__link" href="#reviews">Reviews</a>
+      <a class="nav__link" href="#contact">Contact</a>
+    </nav>
+
+    <a href="#reserve" class="nav__cta"><span>Reserve Table</span></a>
+
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+      <i aria-hidden="true"></i>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile drawer -->
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+  <nav class="drawer__links" aria-label="Mobile">
+    <a class="drawer__link" href="#home"><em>01</em>Home</a>
+    <a class="drawer__link" href="#about"><em>02</em>About</a>
+    <a class="drawer__link" href="#menu"><em>03</em>Menu</a>
+    <a class="drawer__link" href="#experience"><em>04</em>Experience</a>
+    <a class="drawer__link" href="#gallery"><em>05</em>Gallery</a>
+    <a class="drawer__link" href="#reviews"><em>06</em>Reviews</a>
+    <a class="drawer__link" href="#reserve"><em>07</em>Reserve</a>
+    <a class="drawer__link" href="#contact"><em>08</em>Contact</a>
+  </nav>
+  <div class="drawer__foot">
+    <a href="tel:09820050705">098200 50705</a>
+    <span>Worli, Mumbai</span>
+  </div>
+</div>
+
+<main>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero" id="home">
+  <div class="hero__media" id="heroMedia" aria-hidden="true">
+    <img
+      src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=2000&q=80"
+      alt=""
+      fetchpriority="high" />
+  </div>
+  <div class="hero__scrim" aria-hidden="true"></div>
+  <div class="hero__vignette" aria-hidden="true"></div>
+
+  <div class="container hero__inner">
+    <div class="hero__content">
+      <p class="eyebrow hero__eyebrow">SOBO 25, Worli · Mumbai</p>
+
+      <h1>
+        <span class="line"><span>A New Era of</span></span>
+        <span class="line"><span>Dining <em class="italic-accent" style="font-style:italic">.</em></span></span>
+      </h1>
+
+      <p class="hero__sub">
+        Opening late 2025. A sophisticated North Indian dining destination
+        by renowned chefs. Modern interpretations, slow-cooked kebabs, and
+        expertly crafted cocktails.
+      </p>
+
+      <div class="hero__ctas">
+        <a href="#menu" class="btn btn--gold">
+          <span>Explore Menu</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="#reserve" class="btn btn--ghost"><span>Reserve a Table</span></a>
+        <button type="button" class="btn btn--line" data-order>
+          <span>Order Online</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+      </div>
+
+      <div class="hero__meta">
+        <span><i aria-hidden="true"></i>4.6 ★ · 74+ Google Reviews</span>
+        <span><i aria-hidden="true"></i>Proudly Women-Owned</span>
+        <span><i aria-hidden="true"></i>Closed Mondays</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero__scroll" aria-hidden="true">
+    <span>Scroll</span>
+    <i></i>
+  </div>
+</section>
+
+<!-- ============================================================
+     INTRO / EDITORIAL
+     ============================================================ -->
+<section class="section intro" id="about">
+  <div class="container">
+    <div class="intro__grid">
+      <div>
+        <p class="eyebrow" data-reveal>The Aahii Experience</p>
+        <h2 data-reveal data-delay="1">
+          Where heritage meets <em>modern sophistication.</em>
+        </h2>
+
+        <p class="lede" data-reveal data-delay="2">
+          Opening its doors in late 2025, Aahii is poised to become a
+          destination for sophisticated North Indian dining. This restaurant
+          and bar offers a modern interpretation of familiar regional
+          flavours, complemented by expertly crafted cocktails.
+        </p>
+        <p class="lede" data-reveal data-delay="2" style="margin-top:22px">
+          Under the guidance of renowned chefs, the menu features a refined
+          selection of slow-cooked kebabs, fragrant biryanis, and comforting
+          mains — alongside playful small plates that reinvent classic Indian
+          street food.
+        </p>
+
+        <div class="intro__stats" data-reveal data-delay="3">
+          <div class="stat"><b>4.6★</b><span>Google Rating</span></div>
+          <div class="stat"><b>74+</b><span>Guest Reviews</span></div>
+          <div class="stat"><b>₹2,000+</b><span>Per Person</span></div>
+        </div>
+      </div>
+
+      <div class="intro__media" data-reveal="clip" data-delay="1">
+        <figure>
+          <img
+            src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1200&q=80"
+            alt="Elegant interior of Aahii with warm chandelier lighting"
+            loading="lazy" />
+        </figure>
+        <div class="intro__badge">
+          <b>Est. 2025</b>
+          <span>Worli · Mumbai</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SIGNATURE DISHES
+     ============================================================ -->
+<section class="section signatures" id="signatures">
+  <div class="container">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow" data-reveal>Signature Plates</p>
+        <h2 data-reveal data-delay="1">Culinary Masterpieces</h2>
+      </div>
+      <p class="lede" style="max-width:34ch;margin-bottom:6px" data-reveal data-delay="2">
+        Dishes drawn from across India and reimagined with precision,
+        patience and quiet luxury.
+      </p>
+    </div>
+
+    <div class="dishes" data-reveal>
+
+      <a class="dish" href="#menu" aria-label="Buttery Tilisami Chicken Tinkey">
+        <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=1000&q=80"
+             alt="Buttery Tilisami Chicken Tinkey — smoky, buttery chicken skewers" loading="lazy" />
+        <div class="dish__body">
+          <span class="dish__tag">Signature</span>
+          <h3 class="dish__name">Buttery Tilisami Chicken Tinkey</h3>
+          <p class="dish__desc">Rich, comforting and smoky — a guest favourite, slowly cooked to perfection.</p>
+          <span class="dish__line" aria-hidden="true"></span>
+        </div>
+      </a>
+
+      <a class="dish" href="#menu" aria-label="Old Delhi Mutton Nalli Nihari">
+        <img src="https://images.unsplash.com/photo-1633945274405-b6c8069047b0?auto=format&fit=crop&w=1000&q=80"
+             alt="Old Delhi Mutton Nalli Nihari — slow-cooked mutton shank stew" loading="lazy" />
+        <div class="dish__body">
+          <span class="dish__tag">Heritage</span>
+          <h3 class="dish__name">Old Delhi Mutton Nalli Nihari</h3>
+          <p class="dish__desc">Slow-cooked overnight in the tradition of Old Delhi — deep, aromatic, unforgettable.</p>
+          <span class="dish__line" aria-hidden="true"></span>
+        </div>
+      </a>
+
+      <a class="dish" href="#menu" aria-label="Flat Avocado Bhel Puri">
+        <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=1000&q=80"
+             alt="Flat Avocado Bhel Puri — a modern reinterpretation of street food" loading="lazy" />
+        <div class="dish__body">
+          <span class="dish__tag">Modern</span>
+          <h3 class="dish__name">Flat Avocado Bhel Puri</h3>
+          <p class="dish__desc">A playful reinvention of classic bhel — creamy avocado, crisp textures, bright finish.</p>
+          <span class="dish__line" aria-hidden="true"></span>
+        </div>
+      </a>
+
+      <a class="dish" href="#menu" aria-label="Masala Nimbu Calamari">
+        <img src="https://images.unsplash.com/photo-1599256872237-5dcc0fbe9668?auto=format&fit=crop&w=1000&q=80"
+             alt="Masala Nimbu Calamari — spiced calamari with citrus notes" loading="lazy" />
+        <div class="dish__body">
+          <span class="dish__tag">Small Plate</span>
+          <h3 class="dish__name">Masala Nimbu Calamari</h3>
+          <p class="dish__desc">Tender calamari, bright citrus, warm spice — a plate designed for sharing.</p>
+          <span class="dish__line" aria-hidden="true"></span>
+        </div>
+      </a>
+
+      <a class="dish" href="#menu" aria-label="Malabar Cherry and Pepper Cheesecake">
+        <img src="https://images.unsplash.com/photo-1567171466295-4afa63d45416?auto=format&fit=crop&w=1000&q=80"
+             alt="Malabar Cherry and Pepper Cheesecake — dessert with warm spice and dark cherry" loading="lazy" />
+        <div class="dish__body">
+          <span class="dish__tag">Dessert</span>
+          <h3 class="dish__name">Malabar Cherry &amp; Pepper Cheesecake</h3>
+          <p class="dish__desc">A dessert that lingers — dark cherry, warm pepper, silken cheesecake.</p>
+          <span class="dish__line" aria-hidden="true"></span>
+        </div>
+      </a>
+
+      <a class="dish" href="#menu" aria-label="Aahii Butter Chicken">
+        <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=1000&q=80"
+             alt="Aahii Butter Chicken — rich, silky tomato-butter gravy" loading="lazy" />
+        <div class="dish__body">
+          <span class="dish__tag">Signature</span>
+          <h3 class="dish__name">Aahii Butter Chicken</h3>
+          <p class="dish__desc">Our house signature — silky, slow-simmered, and quietly perfect.</p>
+          <span class="dish__line" aria-hidden="true"></span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     MENU
+     ============================================================ -->
+<section class="section menu" id="menu">
+  <div class="container">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow" data-reveal>The Menu</p>
+        <h2 data-reveal data-delay="1">An Exquisite Culinary Journey</h2>
+      </div>
+      <p class="lede" style="max-width:34ch;margin-bottom:6px" data-reveal data-delay="2">
+        A selection from our kitchen — prices shown are those verified from
+        our current listing.
+      </p>
+    </div>
+
+    <div class="menu__tabs" role="tablist" aria-label="Menu categories" id="menuTabs">
+      <button class="tab is-active" role="tab" aria-selected="true" data-cat="highlights">Highlights</button>
+      <button class="tab" role="tab" aria-selected="false" data-cat="side">Side Plates</button>
+      <button class="tab" role="tab" aria-selected="false" data-cat="small">Small Plates</button>
+      <button class="tab" role="tab" aria-selected="false" data-cat="large">Large Plates</button>
+      <button class="tab" role="tab" aria-selected="false" data-cat="bar">Bar Plates</button>
+      <button class="tab" role="tab" aria-selected="false" data-cat="dessert">Dessert Plates</button>
+    </div>
+
+    <div class="menu__panel" id="menuPanel" role="tabpanel" aria-live="polite"></div>
+
+    <div class="menu__note">
+      <span>Prices inclusive of applicable taxes as listed. Menu subject to seasonal change.</span>
+      <button type="button" class="btn--line" data-order style="font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;">
+        Order Online
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     EXPERIENCE
+     ============================================================ -->
+<section class="section experience" id="experience">
+  <div class="container">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow" data-reveal>The Evening</p>
+        <h2 data-reveal data-delay="1" style="color:var(--ink)">An Evening Redefined.</h2>
+      </div>
+      <p class="lede" style="max-width:36ch;margin-bottom:6px" data-reveal data-delay="2">
+        Every element of the evening is designed — from the first cocktail to
+        the last dessert.
+      </p>
+    </div>
+
+    <div class="exp-grid" data-reveal>
+
+      <div class="exp-item">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V5l10-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="16" cy="16" r="3"/></svg>
+        <h3>Live Music &amp; Cocktails</h3>
+        <p>Live music, a full bar on site, and cocktails that blend traditional Indian botanicals with contemporary technique.</p>
+      </div>
+
+      <div class="exp-item">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h11v9a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V8zM16 10h2.5a2 2 0 0 1 2 2v3a1.5 1.5 0 0 1-1.5 1.5H16"/></svg>
+        <h3>Offerings</h3>
+        <p>Alcohol, beer, cocktails, coffee, all-you-can-eat, small plates, and vegetarian options.</p>
+      </div>
+
+      <div class="exp-item">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="1"/><path d="M8 21h8M12 18v3"/></svg>
+        <h3>Dining Options</h3>
+        <p>Brunch, lunch, dinner, catering, dessert, seating, and attentive table service.</p>
+      </div>
+
+      <div class="exp-item">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18h16M6 18v-4a6 6 0 0 1 12 0v4"/></svg>
+        <h3>Amenities</h3>
+        <p>Wi-Fi, restroom, valet parking and a free parking lot.</p>
+      </div>
+
+      <div class="exp-item">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 5.6L20 9.2l-4 3.9.9 5.9L12 16.3 7.1 19l.9-5.9-4-3.9 5.6-.6z"/></svg>
+        <h3>Atmosphere</h3>
+        <p>Casual yet upscale — cozy, romantic and trendy.</p>
+      </div>
+
+      <div class="exp-item">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.4"/><path d="M3 20c0-3.3 2.7-5 6-5s6 1.7 6 5M16 20c0-2.3 1.6-3.8 4-4"/></svg>
+        <h3>Crowd</h3>
+        <p>Family friendly, groups, LGBTQ+ friendly.</p>
+      </div>
+
+      <div class="exp-item">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="1"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+        <h3>Planning</h3>
+        <p>Reservations recommended and accepted.</p>
+      </div>
+
+      <div class="exp-item">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3"/><path d="M6 20c0-3.3 2.7-5 6-5s6 1.7 6 5"/></svg>
+        <h3>Children &amp; Service</h3>
+        <p>High chairs and changing tables available. Delivery, takeaway and dine-in.</p>
+      </div>
+
+    </div>
+
+    <div class="exp-foot">
+      <p data-reveal>"An evening designed around flavour, warmth and quiet luxury."</p>
+      <div class="tags" data-reveal data-delay="1">
+        <span class="tag">Upscale</span>
+        <span class="tag">Cozy</span>
+        <span class="tag">Romantic</span>
+        <span class="tag">Trendy</span>
+        <span class="tag">Women-Owned</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     GALLERY
+     ============================================================ -->
+<section class="section gallery" id="gallery">
+  <div class="container">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow" data-reveal>Inside Aahii</p>
+        <h2 data-reveal data-delay="1">The Gallery</h2>
+      </div>
+      <p class="lede" style="max-width:32ch;margin-bottom:6px" data-reveal data-delay="2">
+        Chandelier glow, plated artistry and the quiet luxury of every corner.
+      </p>
+    </div>
+
+    <div class="masonry" id="masonry" data-reveal></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     REVIEWS
+     ============================================================ -->
+<section class="section reviews" id="reviews">
+  <div class="container">
+    <p class="eyebrow" data-reveal>Guest Voices</p>
+
+    <div class="reviews__head">
+      <div class="rating-block" data-reveal data-delay="1">
+        <div class="rating-num">4.6<sup>★</sup></div>
+        <div class="stars" role="img" aria-label="Rated 4.6 out of 5">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7L12 17.8 5.8 21.2l1.4-7L2 9.4l7-.8z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7L12 17.8 5.8 21.2l1.4-7L2 9.4l7-.8z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7L12 17.8 5.8 21.2l1.4-7L2 9.4l7-.8z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7L12 17.8 5.8 21.2l1.4-7L2 9.4l7-.8z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7L12 17.8 5.8 21.2l1.4-7L2 9.4l7-.8z"/></svg>
+        </div>
+        <p class="rating-count">74+ Google Reviews</p>
+      </div>
+
+      <div class="reviews__intro" data-reveal data-delay="2">
+        <p>
+          What our guests say about their evenings at Aahii.
+        </p>
+      </div>
+    </div>
+
+    <div class="review-grid" data-reveal>
+
+      <figure class="review-card">
+        <div class="review-card__stars" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7L12 17.8 5.8 21.2l1.4-7L2 9.4l7-.8z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7L12 17.8 5.8 21.2l1.4-7L2 9.4l7-.8z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7L12 17.8 5.8 21.2l1.4-7L2 9.4l7-.8z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7L12 17.8 5.8 21.2l1.4-7L2 9.4l7-.8z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7L12 17.8 5.8 21.2l1.4-7L2 9.4l7-.8z"/></svg>
+        </div>
+        <blockquote>
+          "The ambiance here is fantastic — great music, and the service is
+          genuinely high quality, right down to the small details like plates,
+          tissues, and cleanliness. The bar selection is brilliant too."
+        </blockquote>
+        <figcaption><i aria-hidden="true"></i>Kyle Meyers</figcaption>
+      </figure>
+
+      <figure class="review-card">
+        <div class="review-card__stars" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7L12 17.8 5.8 21.2l1.4-7L2 9.4l7-.8z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7L12 17.8 5.8 21.2l1.4-7L2 9.4l7-.8z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7L12 17.8 5.8 21.2l1.4-7L2 9.4l7-.8z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7L12 17.8 5.8 21.2l1.4-7L2 9.4l7-.8z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7L12 17.8 5.8 21.2l1.4-7L2 9.4l7-.8z"/></svg>
+        </div>
+        <blockquote>
+          "Had a great dine-in experience at Aahii where the food truly takes
+          centre stage. The buttery tilismi chicken was rich and comforting,
+          while the murg tikka was perfectly cooked — smoky, juicy…"
+        </blockquote>
+        <figcaption><i aria-hidden="true"></i>Saurav Verma</figcaption>
+      </figure>
+
+      <figure class="review-card">
+        <div class="review-card__stars" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7L12 17.8 5.8 21.2l1.4-7L2 9.4l7-.8z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7L12 17.8 5.8 21.2l1.4-7L2 9.4l7-.8z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7L12 17.8 5.8 21.2l1.4-7L2 9.4l7-.8z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7L12 17.8 5.8 21.2l1.4-7L2 9.4l7-.8z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7L12 17.8 5.8 21.2l1.4-7L2 9.4l7-.8z"/></svg>
+        </div>
+        <blockquote>
+          "Had some amazing cocktails today… they didn't just look good they
+          even tasted fab… THANKS to RAHUL our server for his prompt service…
+          FOOD WAS DELICIOUS TOO… MUST VISIT…"
+        </blockquote>
+        <figcaption><i aria-hidden="true"></i>Priyanka Udhwani</figcaption>
+      </figure>
+
+    </div>
+
+    <div class="reviews__cta" data-reveal>
+      <a class="btn--line"
+         href="https://www.google.com/maps/search/?api=1&query=Aahii+Worli+Mumbai+2R7F%2BHV"
+         target="_blank" rel="noopener noreferrer">
+        View all reviews on Google
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     RESERVATION
+     ============================================================ -->
+<section class="section reserve" id="reserve">
+  <div class="reserve__bg" aria-hidden="true">
+    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1800&q=80"
+         alt="" loading="lazy" />
+  </div>
+
+  <div class="container">
+    <div class="reserve__grid">
+
+      <div class="reserve__aside">
+        <p class="eyebrow" data-reveal>Reservations</p>
+        <h2 data-reveal data-delay="1">Your Table Awaits.</h2>
+        <p data-reveal data-delay="2">
+          Join us for an evening of refined North Indian dining, warm
+          hospitality and unforgettable cocktails at SOBO 25, Worli.
+        </p>
+        <div class="reserve__contact" data-reveal data-delay="3">
+          <span>Prefer to call? <a href="tel:09820050705">098200 50705</a></span>
+          <span>Worli, Mumbai · Open 12:30 PM – 00:30 AM · Closed Mondays</span>
+        </div>
+      </div>
+
+      <div data-reveal="right" data-delay="1">
+        <form class="form" id="reserveForm" novalidate>
+          <div class="form__row">
+            <div class="field">
+              <label for="r-name">Full Name</label>
+              <input id="r-name" name="name" type="text" placeholder="Your name" autocomplete="name" required />
+              <span class="field__err">Please enter your name.</span>
+            </div>
+            <div class="field">
+              <label for="r-phone">Phone Number</label>
+              <input id="r-phone" name="phone" type="tel" placeholder="10-digit mobile number" autocomplete="tel" required />
+              <span class="field__err">Please enter a valid 10-digit phone number.</span>
+            </div>
+          </div>
+
+          <div class="form__row">
+            <div class="field">
+              <label for="r-guests">Guests</label>
+              <select id="r-guests" name="guests" required>
+                <option value="">Select</option>
+                <option>1 Guest</option>
+                <option>2 Guests</option>
+                <option>3 Guests</option>
+                <option>4 Guests</option>
+                <option>5 Guests</option>
+                <option>6 Guests</option>
+                <option>7+ Guests</option>
+              </select>
+              <span class="field__err">Please select number of guests.</span>
+            </div>
+            <div class="field">
+              <label for="r-date">Date</label>
+              <input id="r-date" name="date" type="date" required />
+              <span class="field__err">Please choose a date.</span>
+            </div>
+          </div>
+
+          <div class="form__row">
+            <div class="field">
+              <label for="r-time">Time</label>
+              <input id="r-time" name="time" type="time" required />
+              <span class="field__err">Please choose a time.</span>
+            </div>
+            <div class="field">
+              <label for="r-occasion">Occasion <span style="opacity:.5">(optional)</span></label>
+              <input id="r-occasion" name="occasion" type="text" placeholder="Birthday, anniversary…" />
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn--gold form__submit">
+            <span>Request a Reservation</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+
+          <p class="form__hint">
+            This is a demo form. No live reservation system is connected yet.
+          </p>
+        </form>
+
+        <div class="form form-success" id="reserveSuccess" hidden>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 12.5l2.6 2.6L16 9.5"/></svg>
+          <h3>Thank you.</h3>
+          <p>
+            This demo reservation request has been captured. In the final
+            website, this would be delivered directly to Aahii's reservation
+            desk and confirmed by call or WhatsApp.
+          </p>
+          <button type="button" class="btn btn--ghost" id="reserveReset"><span>Make another request</span></button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     LOCATION
+     ============================================================ -->
+<section class="section location" id="contact">
+  <div class="container">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow" data-reveal>Find Us</p>
+        <h2 data-reveal data-delay="1" style="color:var(--ink)">Visit Aahii</h2>
+      </div>
+      <p class="lede" style="max-width:32ch;margin-bottom:6px" data-reveal data-delay="2">
+        On the 4th floor of Bengal Chemical Bavan, at SOBO 25 — the heart of
+        Worli.
+      </p>
+    </div>
+
+    <div class="loc__grid">
+
+      <div class="loc__info" data-reveal>
+        <h3>4th Floor, Bengal Chemical Bavan, SOBO 25, Worli, Mumbai.</h3>
+
+        <address class="loc__addr">
+          <b>Aahii</b><br />
+          4th Floor, Bengal Chemical Bavan,<br />
+          SOBO 25, SV 188, Swatantryaveer Savarkar Rd,<br />
+          opp. Century Bazaar, Mahim West,<br />
+          Worli, Mumbai, Maharashtra – 400025<br />
+          <span style="opacity:.6;font-size:13px">Plus Code: 2R7F+HV Mumbai</span>
+        </address>
+
+        <div class="loc__rows">
+          <div class="loc__row">
+            <span>Phone</span>
+            <a href="tel:09820050705">098200 50705</a>
+          </div>
+          <div class="loc__row">
+            <span>WhatsApp</span>
+            <a href="https://wa.me/919820050705" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+          </div>
+          <div class="loc__row">
+            <span>Hours</span>
+            <strong>12:30 PM – 00:30 AM · Closed Mondays</strong>
+          </div>
+          <div class="loc__row">
+            <span>Price Range</span>
+            <strong>₹2,000+ per person</strong>
+          </div>
+        </div>
+
+        <div class="loc__actions">
+          <a class="btn btn--gold"
+             href="https://www.google.com/maps/search/?api=1&query=Aahii+Worli+Mumbai+2R7F%2BHV"
+             target="_blank" rel="noopener noreferrer">
+            <span>Get Directions</span>
+          </a>
+          <a class="btn btn--ghost-dark" href="tel:09820050705"><span>Call Restaurant</span></a>
+          <a class="btn btn--ghost-dark"
+             href="https://wa.me/919820050705?text=Hello%20Aahii%2C%20I%27d%20like%20to%20enquire%20about%20a%20reservation."
+             target="_blank" rel="noopener noreferrer">
+            <span>WhatsApp</span>
+          </a>
+        </div>
+      </div>
+
+      <a class="map"
+         href="https://www.google.com/maps/search/?api=1&query=Aahii+Worli+Mumbai+2R7F%2BHV"
+         target="_blank" rel="noopener noreferrer"
+         aria-label="Open Aahii location in Google Maps"
+         data-reveal="right" data-delay="1">
+        <div class="map__pin">
+          <i aria-hidden="true"></i>
+          <b>Aahii</b>
+          <span>SOBO 25 · Worli · Mumbai</span>
+        </div>
+        <span class="map__hint">Tap to open in Google Maps</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+
+      <div class="footer__brand">
+        <a href="#home" class="nav__brand" aria-label="Aahii — back to top">
+          <span class="brand-mark" aria-hidden="true">A</span>
+          <span class="brand-text">
+            <b>AAHII</b>
+            <small>Worli · Mumbai</small>
+          </span>
+        </a>
+        <p>A culinary journey awaits you. A sophisticated North Indian dining destination at SOBO 25, Worli — proudly women-owned.</p>
+
+        <div class="footer__social">
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".9" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8.8c0-.5.3-.8.8-.8z"/></svg>
+          </a>
+          <a href="https://wa.me/919820050705" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-3.2-6.4M20 4v4h-4"/><path d="M4 20l1.6-4.2A8 8 0 0 0 12 20h1"/></svg>
+          </a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Aahii+Worli+Mumbai" target="_blank" rel="noopener noreferrer" aria-label="Google Maps">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:09820050705">098200 50705</a></li>
+          <li><a href="https://wa.me/919820050705" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Aahii+Worli+Mumbai" target="_blank" rel="noopener noreferrer">Google Maps</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col footer__col--cta">
+        <h4>Visit Us</h4>
+        <address>
+          4th Floor, Bengal Chemical Bavan,<br />
+          SOBO 25, Worli, Mumbai,<br />
+          Maharashtra – 400025
+        </address>
+        <a href="#reserve" class="btn btn--gold footer__cta"><span>Reserve a Table</span></a>
+      </div>
+
+    </div>
+
+    <div class="footer__wordmark" aria-hidden="true">AAHII</div>
+
+    <div class="footer__bottom">
+      <span>© <span id="year">2025</span> Aahii. All rights reserved.</span>
+      <span class="demo-badge"><i aria-hidden="true"></i>Website concept demo — created for presentation purposes.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     FLOATING UI
+     ============================================================ -->
+<button class="to-top" id="toTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+</button>
+
+<nav class="mobile-bar" id="mobileBar" aria-label="Quick actions">
+  <a href="tel:09820050705">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h3l2 5-2.5 1.5a12 12 0 0 0 6 6L15 14l5 2v3a2 2 0 0 1-2.2 2A16 16 0 0 1 3 6.2 2 2 0 0 1 5 4z"/></svg>
+    Call
+  </a>
+  <a href="#reserve" class="is-accent">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="1"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+    Reserve
+  </a>
+  <a href="https://wa.me/919820050705?text=Hello%20Aahii%2C%20I%27d%20like%20to%20enquire%20about%20a%20reservation." target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-3.2-6.4M20 4v4h-4"/><path d="M4 20l1.6-4.2A8 8 0 0 0 12 20h1"/></svg>
+    WhatsApp
+  </a>
+</nav>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<!-- ============================================================
+     LIGHTBOX
+     ============================================================ -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="lb-btn lb-close" id="lbClose" aria-label="Close viewer">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <button class="lb-btn lb-prev" id="lbPrev" aria-label="Previous image">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+  </button>
+  <button class="lb-btn lb-next" id="lbNext" aria-label="Next image">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+  </button>
+
+  <figure class="lightbox__fig">
+    <img id="lbImg" src="" alt="" />
+    <figcaption class="lightbox__cap">
+      <b id="lbTitle">—</b>
+      <span id="lbMeta">—</span>
+    </figcaption>
+  </figure>
+</div>
+
+<!-- ============================================================
+     JAVASCRIPT
+     ============================================================ -->
+<script>
+(function () {
+  "use strict";
+
+  /* ----------------------------------------------------------
+     CONFIG
+     ---------------------------------------------------------- */
+  var GALLERY = [
+    { src:"https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=80", title:"The Chandelier Room", meta:"Interior",   cls:"g-a" },
+    { src:"https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1200&q=80", title:"Warm Lighting",    meta:"Ambience",   cls:"g-b" },
+    { src:"https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=80", title:"Table Setting",    meta:"Detail",     cls:"g-c" },
+    { src:"https://images.unsplash.com/photo-1592861956120-e524fc739696?auto=format&fit=crop&w=1400&q=80", title:"Evening Ambience", meta:"Atmosphere", cls:"g-d" },
+    { src:"https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=1200&q=80", title:"Plated with Care", meta:"Food",       cls:"g-b" },
+    { src:"https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=1200&q=80", title:"Buttery Chicken",  meta:"Signature",  cls:"g-b" },
+    { src:"https://images.unsplash.com/photo-1567171466295-4afa63d45416?auto=format&fit=crop&w=1200&q=80", title:"Sweet Finish",     meta:"Dessert",    cls:"g-d" },
+    { src:"https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1200&q=80", title:"Cocktail Hour",    meta:"Bar",        cls:"g-b" }
+  ];
+
+  /* Menu — only verified prices. Items without verified pricing
+     show a soft label instead of a fabricated price. */
+  var MENU = {
+    highlights: [
+      { name:"Buttery Tilisami Chicken Tinkey", desc:"Rich, smoky, slow-cooked chicken tinkey", veg:false, price:null, tag:"Signature" },
+      { name:"Old Delhi Mutton Nalli Nihari", desc:"Overnight slow-cooked mutton shank stew", veg:false, price:null, tag:"Heritage" },
+      { name:"Flat Avocado Bhel Puri", desc:"Modern reinterpretation of classic bhel puri", veg:true, price:null, tag:"Modern" },
+      { name:"Masala Nimbu Calamari", desc:"Tender calamari with bright citrus and warm spice", veg:false, price:null, tag:"Small Plate" },
+      { name:"Malabar Cherry & Pepper Cheesecake", desc:"Dark cherry, warm pepper, silken cheesecake", veg:true, price:null, tag:"Dessert" },
+      { name:"Aahii Butter Chicken", desc:"Our house signature — silky and slow-simmered", veg:false, price:null, tag:"Signature" }
+    ],
+    side: [
+      { name:"Dum Gosht Biryani", desc:"Slow-cooked mutton biryani, dum-sealed", veg:false, price:"₹1050" },
+      { name:"Dum Murg Biryani", desc:"Fragrant chicken biryani, dum-sealed", veg:false, price:"₹995" },
+      { name:"Morel Pulao", desc:"Fragrant pulao with morel mushrooms", veg:true, price:"₹995" },
+      { name:"Dum Subz Biryani", desc:"Aromatic vegetable biryani, dum-sealed", veg:true, price:"₹825" },
+      { name:"Steamed Basmati Rice", desc:"Steamed long-grain basmati rice", veg:true, price:"₹325" },
+      { name:"Roti", desc:"Freshly baked Indian bread", veg:true, price:"₹155" }
+    ],
+    small: [
+      { name:"Flat Avocado Bhel Puri", desc:"Modern bhel puri with creamy avocado", veg:true, price:"₹725" },
+      { name:"Rajasthani Paneer Ka Sula", desc:"Marinated paneer, tandoor-grilled", veg:true, price:"₹645" },
+      { name:"Dahi Mascarpone Kebab", desc:"Delicate kebab with yogurt and mascarpone", veg:true, price:"₹625" },
+      { name:"Badami Broccoli Kalimirch", desc:"Broccoli with almonds and cracked pepper", veg:true, price:"₹625" },
+      { name:"Dilli Tandoori Soya Chaap", desc:"Tandoor-grilled soya chaap, Delhi-style", veg:true, price:"₹595" },
+      { name:"Buttery Tilisami Chicken Tinkey", desc:"Rich, smoky, slow-cooked chicken tinkey", veg:false, price:"₹745" },
+      { name:"Chicken Shawarma", desc:"Middle Eastern-inspired spiced chicken", veg:false, price:null, tag:"Chef's Pick" }
+    ],
+    large: [
+      { name:"Aahii Butter Chicken", desc:"House signature — silky tomato-butter gravy", veg:false, price:"₹895" },
+      { name:"Dhaba Murg", desc:"Robust, dhaba-style chicken curry", veg:false, price:"₹895" },
+      { name:"Murg Roganjosh", desc:"Aromatic Kashmiri-style chicken curry", veg:false, price:"₹895" },
+      { name:"Paneer Tikka Changezi", desc:"Tandoor-grilled paneer in a rich gravy", veg:true, price:"₹775" },
+      { name:"Kataifi Saag Paneer", desc:"Spinach and paneer with crisp kataifi", veg:true, price:"₹775" }
+    ],
+    bar: [
+      { name:"Masala Chaat Marinated Olives", desc:"Olives marinated with chaat masala", veg:true, price:"₹550" },
+      { name:"Chilli Cheese Churros", desc:"Crisp churros with cheese and chilli", veg:true, price:"₹475" },
+      { name:"Kadak Palak Roomali", desc:"Crisp spinach roomali bites", veg:true, price:"₹475" },
+      { name:"Truffled Makhana", desc:"Fox nuts tossed with truffle", veg:true, price:"₹475" },
+      { name:"House Spiced French Fries", desc:"Fries with our house spice blend", veg:true, price:"₹425" }
+    ],
+    dessert: [
+      { name:"Kulfi Falooda", desc:"Traditional kulfi with falooda", veg:true, price:"₹600" },
+      { name:"Nariyal Pannacotta", desc:"Tender coconut pannacotta", veg:true, price:"₹550" },
+      { name:"Kesar Milk Cake", desc:"Saffron-scented milk cake", veg:true, price:"₹650" },
+      { name:"Malabar Cherry & Pepper Cheesecake", desc:"Dark cherry, warm pepper, silken cheesecake", veg:true, price:"₹600" },
+      { name:"Gulab Jamun Cake", desc:"Gulab jamun reimagined as a cake", veg:true, price:"₹650" }
+    ]
+  };
+
+  var PHONE = "09820050705";
+  var WHATSAPP = "https://wa.me/919820050705";
+  var MAPS = "https://www.google.com/maps/search/?api=1&query=Aahii+Worli+Mumbai+2R7F%2BHV";
+
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var $  = function (s, c) { return (c || document).querySelector(s); };
+  var $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
+
+  /* ==========================================================
+     1. LOADER + WELCOME OVERLAY FLOW
+     ========================================================== */
+  (function flow() {
+    var loader = $("#loader");
+    var welcome = $("#welcome");
+    var hero = $(".hero");
+
+    document.body.style.overflow = "hidden";
+
+    // Stage 1: Loader minimum time
+    var minTime = reduceMotion ? 200 : 2800;
+    var start = Date.now();
+
+    function afterLoad() {
+      var wait = Math.max(0, minTime - (Date.now() - start));
+      setTimeout(showWelcome, wait);
+    }
+
+    // Stage 2: Welcome overlay
+    function showWelcome() {
+      if (loader) {
+        loader.classList.add("is-done");
+        setTimeout(function () { if (loader.parentNode) loader.remove(); }, 950);
+      }
+
+      if (!welcome) {
+        revealHero();
+        return;
+      }
+
+      setTimeout(function () {
+        welcome.classList.add("is-show");
+        // Auto-hide after a cinematic pause
+        var holdTime = reduceMotion ? 600 : 4200;
+        setTimeout(hideWelcome, holdTime);
+      }, 200);
+    }
+
+    // Stage 3: Reveal hero
+    function revealHero() {
+      document.body.style.overflow = "";
+      if (hero) hero.classList.add("is-ready");
+      // refresh scroll reveal
+      setTimeout(function () { window.dispatchEvent(new Event("scroll")); }, 100);
+    }
+
+    function hideWelcome() {
+      if (!welcome) { revealHero(); return; }
+      welcome.classList.remove("is-show");
+      welcome.classList.add("is-hide");
+      setTimeout(function () {
+        if (welcome.parentNode) welcome.remove();
+        revealHero();
+      }, 1150);
+    }
+
+    // Allow manual skip on click / key / enter text click
+    function skip() {
+      if (welcome && welcome.classList.contains("is-show")) {
+        hideWelcome();
+      }
+    }
+
+    if (welcome) {
+      welcome.addEventListener("click", skip);
+      var enterEl = $("#welcomeEnter");
+      if (enterEl) enterEl.addEventListener("click", function (e) {
+        e.stopPropagation();
+        skip();
+      });
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === "Escape" || e.key === " ") skip();
+      }, { once: true });
+    }
+
+    if (document.readyState === "complete") afterLoad();
+    else window.addEventListener("load", afterLoad);
+
+    // Hard safety
+    setTimeout(function () {
+      if (welcome && welcome.classList.contains("is-show")) hideWelcome();
+      else revealHero();
+    }, 9000);
+  })();
+
+  /* ==========================================================
+     2. IMAGE FALLBACKS
+     ========================================================== */
+  function bindFallbacks(root) {
+    $$("img", root || document).forEach(function (img) {
+      if (img.dataset.fbBound) return;
+      img.dataset.fbBound = "1";
+      img.addEventListener("error", function () {
+        img.style.visibility = "hidden";
+        var p = img.parentElement;
+        if (p) p.classList.add("img-fallback");
+      });
+    });
+  }
+  bindFallbacks();
+
+  /* ==========================================================
+     3. YEAR
+     ========================================================== */
+  var yr = $("#year");
+  if (yr) yr.textContent = new Date().getFullYear();
+
+  /* ==========================================================
+     4. NAVIGATION
+     ========================================================== */
+  var nav = $("#nav");
+  var burger = $("#burger");
+  var drawer = $("#drawer");
+
+  function onScrollNav() {
+    if (window.scrollY > 60) nav.classList.add("is-scrolled");
+    else nav.classList.remove("is-scrolled");
+  }
+  onScrollNav();
+
+  function closeDrawer() {
+    if (!drawer) return;
+    drawer.classList.remove("is-open");
+    burger.classList.remove("is-open");
+    burger.setAttribute("aria-expanded", "false");
+    burger.setAttribute("aria-label", "Open menu");
+    document.body.style.overflow = "";
+  }
+  function openDrawer() {
+    drawer.classList.add("is-open");
+    burger.classList.add("is-open");
+    burger.setAttribute("aria-expanded", "true");
+    burger.setAttribute("aria-label", "Close menu");
+    document.body.style.overflow = "hidden";
+    $$(".drawer__link", drawer).forEach(function (a, i) {
+      a.style.transitionDelay = (0.09 * i + 0.15) + "s";
+    });
+  }
+
+  if (burger && drawer) {
+    burger.addEventListener("click", function () {
+      if (drawer.classList.contains("is-open")) closeDrawer();
+      else openDrawer();
+    });
+    $$(".drawer__link", drawer).forEach(function (a) {
+      a.addEventListener("click", closeDrawer);
+    });
+    drawer.addEventListener("click", function (e) {
+      if (e.target === drawer) closeDrawer();
+    });
+  }
+
+  var sections = $$("section[id]");
+  var navLinks = $$(".nav__link");
+  if ("IntersectionObserver" in window && sections.length) {
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        var id = en.target.id;
+        navLinks.forEach(function (l) {
+          l.classList.toggle("is-active", l.getAttribute("href") === "#" + id);
+        });
+      });
+    }, { rootMargin: "-45% 0px -50% 0px", threshold: 0 });
+    sections.forEach(function (s) { spy.observe(s); });
+  }
+
+  /* ==========================================================
+     5. SCROLL REVEAL
+     ========================================================== */
+  (function reveal() {
+    var items = $$("[data-reveal]");
+    if (!items.length) return;
+
+    if (reduceMotion || !("IntersectionObserver" in window)) {
+      items.forEach(function (el) { el.classList.add("is-in"); });
+      return;
+    }
+
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) {
+          en.target.classList.add("is-in");
+          io.unobserve(en.target);
+        }
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+
+    items.forEach(function (el) { io.observe(el); });
+  })();
+
+  /* ==========================================================
+     6. HERO PARALLAX
+     ========================================================== */
+  (function heroParallax() {
+    var media = $("#heroMedia");
+    if (!media || reduceMotion) return;
+    var ticking = false;
+
+    function update() {
+      var y = window.scrollY;
+      if (y < window.innerHeight * 1.2) {
+        media.style.transform = "translate3d(0," + (y * 0.3) + "px,0)";
+      }
+      ticking = false;
+    }
+    window.addEventListener("scroll", function () {
+      if (!ticking) {
+        ticking = true;
+        window.requestAnimationFrame(update);
+      }
+    }, { passive: true });
+  })();
+
+  /* ==========================================================
+     7. MENU
+     ========================================================== */
+  (function menu() {
+    var panel = $("#menuPanel");
+    var tabs = $$("#menuTabs .tab");
+    if (!panel) return;
+
+    function vegClass(veg) {
+      return '<span class="mitem__veg mitem__veg--' + (veg ? "veg" : "nv") + '" aria-label="' + (veg ? "Vegetarian" : "Non-vegetarian") + '"></span>';
+    }
+
+    function render(cat) {
+      var data = MENU[cat];
+
+      if (!data || data.empty) {
+        panel.innerHTML =
+          '<div class="menu__empty">' +
+            '<h3>' + (data ? data.title : "Menu") + '</h3>' +
+            '<p>' + (data ? data.note : "Please ask our team for details.") + '</p>' +
+            '<a class="btn btn--line" href="tel:' + PHONE + '">Call us for the full menu</a>' +
+          '</div>';
+        return;
+      }
+
+      var html = '<div class="menu__list">';
+      data.forEach(function (item, i) {
+        var priceHtml = item.price
+          ? '<span class="mitem__price">' + item.price + '</span>'
+          : '<span class="mitem__price mitem__price--soft">' + (item.tag || "Available") + '</span>';
+
+        html +=
+          '<article class="mitem" style="animation-delay:' + (i * 0.05) + 's">' +
+            '<div class="mitem__text">' +
+              '<h3 class="mitem__name">' + vegClass(item.veg) + item.name + '</h3>' +
+              (item.desc ? '<p class="mitem__desc">' + item.desc + '</p>' : '') +
+            '</div>' +
+            priceHtml +
+          '</article>';
+      });
+      html += '</div>';
+      panel.innerHTML = html;
+    }
+
+    tabs.forEach(function (tab) {
+      tab.addEventListener("click", function () {
+        tabs.forEach(function (t) {
+          t.classList.remove("is-active");
+          t.setAttribute("aria-selected", "false");
+        });
+        tab.classList.add("is-active");
+        tab.setAttribute("aria-selected", "true");
+
+        panel.style.animation = "none";
+        void panel.offsetWidth;
+        panel.style.animation = "";
+
+        render(tab.dataset.cat);
+      });
+    });
+
+    render("highlights");
+  })();
+
+  /* ==========================================================
+     8. GALLERY + LIGHTBOX
+     ========================================================== */
+  (function gallery() {
+    var wrap = $("#masonry");
+    if (!wrap) return;
+
+    var html = "";
+    GALLERY.forEach(function (g, i) {
+      html +=
+        '<button class="gitem ' + g.cls + '" data-index="' + i + '" aria-label="View image: ' + g.title + '">' +
+          '<img src="' + g.src + '" alt="' + g.title + ' — Aahii" loading="lazy" />' +
+          '<span class="gitem__cap"><b>' + g.title + '</b><span>' + g.meta + '</span></span>' +
+        '</button>';
+    });
+    wrap.innerHTML = html;
+    bindFallbacks(wrap);
+
+    var lb      = $("#lightbox");
+    var lbImg   = $("#lbImg");
+    var lbTitle = $("#lbTitle");
+    var lbMeta  = $("#lbMeta");
+    var current = 0;
+    var lastFocus = null;
+
+    function show(i) {
+      current = (i + GALLERY.length) % GALLERY.length;
+      var g = GALLERY[current];
+      lbImg.src = g.src;
+      lbImg.alt = g.title + " — Aahii";
+      lbTitle.textContent = g.title;
+      lbMeta.textContent = (current + 1) + " / " + GALLERY.length + " · " + g.meta;
+    }
+
+    function open(i) {
+      lastFocus = document.activeElement;
+      show(i);
+      lb.classList.add("is-open");
+      document.body.style.overflow = "hidden";
+      $("#lbClose").focus();
+    }
+
+    function close() {
+      lb.classList.remove("is-open");
+      document.body.style.overflow = "";
+      if (lastFocus && lastFocus.focus) lastFocus.focus();
+    }
+
+    wrap.addEventListener("click", function (e) {
+      var btn = e.target.closest(".gitem");
+      if (!btn) return;
+      open(parseInt(btn.dataset.index, 10) || 0);
+    });
+
+    $("#lbClose").addEventListener("click", close);
+    $("#lbPrev").addEventListener("click", function () { show(current - 1); });
+    $("#lbNext").addEventListener("click", function () { show(current + 1); });
+
+    lb.addEventListener("click", function (e) {
+      if (e.target === lb) close();
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (!lb.classList.contains("is-open")) return;
+      if (e.key === "Escape") close();
+      if (e.key === "ArrowLeft") show(current - 1);
+      if (e.key === "ArrowRight") show(current + 1);
+    });
+
+    var tx = 0, ty = 0;
+    lb.addEventListener("touchstart", function (e) {
+      tx = e.changedTouches[0].clientX;
+      ty = e.changedTouches[0].clientY;
+    }, { passive: true });
+
+    lb.addEventListener("touchend", function (e) {
+      var dx = e.changedTouches[0].clientX - tx;
+      var dy = e.changedTouches[0].clientY - ty;
+      if (Math.abs(dx) > 55 && Math.abs(dx) > Math.abs(dy)) {
+        if (dx < 0) show(current + 1);
+        else show(current - 1);
+      }
+    }, { passive: true });
+  })();
+
+  /* ==========================================================
+     9. RESERVATION FORM
+     ========================================================== */
+  (function reservation() {
+    var form = $("#reserveForm");
+    var success = $("#reserveSuccess");
+    var reset = $("#reserveReset");
+    if (!form) return;
+
+    var dateInput = $("#r-date");
+    if (dateInput) {
+      var t = new Date();
+      var iso = t.getFullYear() + "-" +
+                String(t.getMonth() + 1).padStart(2, "0") + "-" +
+                String(t.getDate()).padStart(2, "0");
+      dateInput.min = iso;
+      dateInput.value = iso;
+    }
+
+    function setError(field, on) {
+      field.classList.toggle("has-error", on);
+    }
+
+    function validate() {
+      var ok = true;
+      $$(".field", form).forEach(function (f) { f.classList.remove("has-error"); });
+
+      var name  = $("#r-name");
+      var phone = $("#r-phone");
+      var guests= $("#r-guests");
+      var date  = $("#r-date");
+      var time  = $("#r-time");
+
+      if (!name.value.trim() || name.value.trim().length < 2) {
+        setError(name.closest(".field"), true); ok = false;
+      }
+      var digits = phone.value.replace(/\D/g, "");
+      if (digits.length < 10) {
+        setError(phone.closest(".field"), true); ok = false;
+      }
+      if (!guests.value) { setError(guests.closest(".field"), true); ok = false; }
+      if (!date.value)   { setError(date.closest(".field"), true); ok = false; }
+      if (!time.value)   { setError(time.closest(".field"), true); ok = false; }
+
+      return ok;
+    }
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (!validate()) {
+        var firstErr = $(".field.has-error input, .field.has-error select", form);
+        if (firstErr) firstErr.focus();
+        return;
+      }
+      form.hidden = true;
+      success.hidden = false;
+      success.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "center" });
+    });
+
+    $$("input, select", form).forEach(function (el) {
+      el.addEventListener("input", function () {
+        var f = el.closest(".field");
+        if (f) f.classList.remove("has-error");
+      });
+    });
+
+    if (reset) {
+      reset.addEventListener("click", function () {
+        form.reset();
+        if (dateInput) {
+          var t2 = new Date();
+          dateInput.value = t2.getFullYear() + "-" +
+            String(t2.getMonth() + 1).padStart(2, "0") + "-" +
+            String(t2.getDate()).padStart(2, "0");
+        }
+        $$(".field", form).forEach(function (f) { f.classList.remove("has-error"); });
+        success.hidden = true;
+        form.hidden = false;
+        form.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "center" });
+      });
+    }
+  })();
+
+  /* ==========================================================
+     10. TOAST + ORDER
+     ========================================================== */
+  var toastEl = $("#toast");
+  var toastTimer = null;
+
+  function toast(msg) {
+    if (!toastEl) return;
+    toastEl.innerHTML = msg;
+    toastEl.classList.add("is-visible");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () {
+      toastEl.classList.remove("is-visible");
+    }, 4400);
+  }
+
+  $$("[data-order]").forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+      toast("<b>Order Online</b><br />Online ordering integration can be connected in the final website.");
+    });
+  });
+
+  /* ==========================================================
+     11. BACK TO TOP + MOBILE BAR
+     ========================================================== */
+  var toTop = $("#toTop");
+  var mobileBar = $("#mobileBar");
+
+  function onScrollUI() {
+    var y = window.scrollY;
+    var show = y > window.innerHeight * 0.75;
+
+    if (toTop) toTop.classList.toggle("is-visible", show);
+    if (mobileBar) mobileBar.classList.toggle("is-visible", y > window.innerHeight * 0.6);
+
+    onScrollNav();
+  }
+
+  var scrollTicking = false;
+  window.addEventListener("scroll", function () {
+    if (!scrollTicking) {
+      scrollTicking = true;
+      window.requestAnimationFrame(function () {
+        onScrollUI();
+        scrollTicking = false;
+      });
+    }
+  }, { passive: true });
+
+  onScrollUI();
+
+  if (toTop) {
+    toTop.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
+    });
+  }
+
+  /* ==========================================================
+     12. SMOOTH ANCHOR SCROLL
+     ========================================================== */
+  $$('a[href^="#"]').forEach(function (a) {
+    a.addEventListener("click", function (e) {
+      var id = a.getAttribute("href");
+      if (!id || id === "#" || id.length < 2) return;
+      var target = document.querySelector(id);
+      if (!target) return;
+
+      e.preventDefault();
+      var navH = nav ? nav.offsetHeight : 0;
+      var top = target.getBoundingClientRect().top + window.scrollY - navH + 1;
+
+      window.scrollTo({ top: top, behavior: reduceMotion ? "auto" : "smooth" });
+
+      target.setAttribute("tabindex", "-1");
+      setTimeout(function () { target.focus({ preventScroll: true }); }, reduceMotion ? 0 : 680);
+    });
+  });
+
+  /* ==========================================================
+     13. CUSTOM CURSOR
+     ========================================================== */
+  (function cursor() {
+    if (reduceMotion) return;
+    if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+
+    var ring = $(".cursor");
+    var dot  = $(".cursor-dot");
+    if (!ring || !dot) return;
+
+    var mx = window.innerWidth / 2, my = window.innerHeight / 2;
+    var rx = mx, ry = my;
+    var visible = false;
+
+    document.addEventListener("mousemove", function (e) {
+      mx = e.clientX; my = e.clientY;
+      if (!visible) {
+        visible = true;
+        ring.style.opacity = "1";
+        dot.style.opacity = "1";
+      }
+      dot.style.transform = "translate(" + mx + "px," + my + "px) translate(-50%,-50%)";
+    }, { passive: true });
+
+    document.addEventListener("mouseleave", function () {
+      ring.style.opacity = "0";
+      dot.style.opacity = "0";
+      visible = false;
+    });
+
+    (function loop() {
+      rx += (mx - rx) * 0.16;
+      ry += (my - ry) * 0.16;
+      ring.style.transform = "translate(" + rx + "px," + ry + "px) translate(-50%,-50%)";
+      window.requestAnimationFrame(loop);
+    })();
+
+    var hoverSel = "a, button, .dish, .gitem, .tab, input, select, .tag, .exp-item, .review-card, .welcome__inner";
+    document.addEventListener("mouseover", function (e) {
+      if (e.target.closest(hoverSel)) ring.classList.add("is-hover");
+    });
+    document.addEventListener("mouseout", function (e) {
+      if (e.target.closest(hoverSel)) ring.classList.remove("is-hover");
+    });
+
+    ring.style.opacity = "0";
+    dot.style.opacity = "0";
+  })();
+
+  /* ==========================================================
+     14. ESCAPE HANDLER
+     ========================================================== */
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && drawer && drawer.classList.contains("is-open")) {
+      closeDrawer();
+      if (burger) burger.focus();
+    }
+  });
+
+})();
+</script>
+</body>
+</html>
